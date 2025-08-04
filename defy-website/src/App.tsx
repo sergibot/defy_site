@@ -120,7 +120,7 @@ As of 2025, these websites were receiving ___ visits per month.
                           paddingBlock: "20px",
                           color: "black",
                           marginRight: "-30px",
-                          paddingRight: "70px",
+                          paddingRight: "30px",
                           borderRadius: "35px",
                           // backgroundColor: "purple",
                           boxShadow: "inset 0px 0px 15px 2px purple",
@@ -137,7 +137,7 @@ As of 2025, these websites were receiving ___ visits per month.
                           // marginLeft:'130px',
                           marginRight: "-30px",
                           textAlign: "right",
-                          paddingRight: "70px",
+                          paddingRight: "60px",
                           borderRadius: "25px",
                         }}
                       >
@@ -162,7 +162,7 @@ As of 2025, these websites were receiving ___ visits per month.
                     color: "black",
                     marginTop: "25px",
                     marginRight: "-30px",
-                    paddingRight: "70px",
+                    paddingRight: "30px",
                     borderRadius: "35px",
                     // backgroundColor: "purple",
                     boxShadow: "inset 0px 0px 25px 2px red",
@@ -186,17 +186,25 @@ As of 2025, these websites were receiving ___ visits per month.
               height: "70vh",
             }}
           >
-            {tabs.map(function (tab) {
-              return (
-                <div>
-                  {activeTab == tab.id ? <div>{tab.content}</div> : null}
-                </div>
-              );
-            })}
-            <div>
-              {activeTab == DonateTab.id ? (
-                <div>{DonateTab.content}</div>
-              ) : null}
+            <div
+              style={{
+                paddingBlock: "50px",
+                paddingLeft: "50px",
+                paddingRight: "50px",
+              }}
+            >
+              {tabs.map(function (tab) {
+                return (
+                  <div>
+                    {activeTab == tab.id ? <div>{tab.content}</div> : null}
+                  </div>
+                );
+              })}
+              <div>
+                {activeTab == DonateTab.id ? (
+                  <div>{DonateTab.content}</div>
+                ) : null}
+              </div>
             </div>
           </div>
         </div>
