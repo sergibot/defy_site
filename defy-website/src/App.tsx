@@ -1,8 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-import Hero from "./components/hero";
-import Intro from "./components/intro";
-import Figures from "./components/figures";
 
 function App() {
   const [activeTab, setActiveTab] = useState("intro");
@@ -18,6 +15,7 @@ function App() {
   const FiguresTab = new Tab("figures", "figures content here");
   const WhoTab = new Tab("who", "who content here");
   const WhatTab = new Tab("what", "what content here");
+  const tabs = [IntroTab, FiguresTab, WhoTab, WhatTab];
   return (
     <>
       <div style={{ display: "flex", flexDirection: "row" }}>
@@ -30,17 +28,16 @@ function App() {
             paddingRight: "2em",
           }}
         >
-          <div style={{backgroundColor:'pink'}} onClick={() => setActiveTab(IntroTab.name)}>
-            <h2>{IntroTab.name}</h2>
-          </div>
-          <div style={{backgroundColor:'purple'}} onClick={() => setActiveTab(FiguresTab.name)}>
-            <h2>{FiguresTab.name}</h2>
-          </div>
-          <p>Who</p>
-          <p>What</p>
-          <p>Why</p>
-          <p>Research</p>
-          <p>{activeTab}</p>
+          {tabs.map(function (tab) {
+            return (
+              <div
+                style={{ backgroundColor: "pink" }}
+                onClick={() => setActiveTab(tab.name)}
+              >
+                <h2>{tab.name}</h2>
+              </div>
+            );
+          })}
         </div>
         <div
           style={{
@@ -50,15 +47,15 @@ function App() {
             paddingRight: "2em",
           }}
         >
-          {activeTab == IntroTab.name ? <div>{IntroTab.content}</div> : null}
-          {activeTab == FiguresTab.name ? (
-            <div>{FiguresTab.content}</div>
-          ) : null}
-          {/* {activeTab == IntroTab.name ? <div>{IntroTab.content}</div> : null} */}
-          {/* {activeTab == IntroTab.name ? <div>{IntroTab.content}</div> : null} */}
-          {/* <Hero /> */}
-          {/* <Intro /> */}
-          {/* <Figures /> */}
+          {tabs.map(function (tab) {
+            return (
+              <div>
+                {activeTab == tab.name ? (
+                  <div>{tab.content}</div>
+                ) : null}
+              </div>
+            );
+          })}
         </div>
       </div>
     </>
