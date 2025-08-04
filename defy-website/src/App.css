@@ -9,3 +9,18 @@
   font-family: 'AnotherTypewriter';
   src: local('AnotherTypewriter'), url('../assets/fonts/atwriter.ttf');
 }
+
+@font-face {
+  font-family: 'Cafe';
+  src: local('Louis George Cafe'), url('../assets/fonts/Louis George Cafe.ttf');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: local('Quicksand'), url('../assets/fonts/Quicksand_Book.otf');
+}
+
+@font-face {
+  font-family: 'HighWay';
+  src: local('HWYGWDE'), url('../assets/fonts/HWYGWDE.ttf');
+}
