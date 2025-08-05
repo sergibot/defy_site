@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Logo } from "./assets/svg/logo";
 import { TabSVG } from "./assets/svg/tab";
+import Findings from "./components/findings";
+import Mission from "./components/mission";
+import Who from "./components/who";
+import Goals from "./components/goals";
 import "./App.css";
 // https://2019.wattenberger.com/blog/react-and-d3
 
@@ -15,11 +19,7 @@ function App() {
     }
   }
   const IntroTab = new Tab("intro", "Mission Statement");
-  // at DefyAbuse.org we are the only entity monitoring the proliferation of DFIAM.
-
-  // We are doing our best to tackle it: outside of annually collecting and combing through thousands of websites (at minimum 18,000 urls per year), we have advised the home office vawg team and the dist etc
-
-  const FiguresTab = new Tab("figures", "Research Findings");
+    const FiguresTab = new Tab("figures", "Research Findings");
   const WhoTab = new Tab("who", "Who Are We?");
   const WhatTab = new Tab("what", "Our Next Goals");
   const DonateTab = new Tab("donate", "Keep Our Lights On!");
@@ -185,7 +185,8 @@ function App() {
                     fontFamily: "AnotherTypewriter",
                     fontWeight: "900",
                     color: "black",
-                    textShadow:'0px 0px 1px white, 0 0 25px white, 0 0 5px white'
+                    textShadow:
+                      "0px 0px 1px white, 0 0 25px white, 0 0 5px white",
                   }}
                 >
                   {DonateTab.name}
@@ -202,8 +203,8 @@ function App() {
                   alignContent: "center",
                   position: "relative",
                   borderRadius: "5px",
-                  animation:'tremble 4000ms',
-                  animationIterationCount:'infinite',
+                  animation: "tremble 4000ms",
+                  animationIterationCount: "infinite",
                   border: "9px solid rgb(35,31,32)",
                 }}
                 onClick={() => setActiveTab(DonateTab.id)}
@@ -239,25 +240,10 @@ function App() {
                 color: "rgb(35,31,32)",
               }}
             >
-              <div>
-                {activeTab == IntroTab.id ? (
-                  <div>
-                    DeepfAIke "porn" (DFIAM) is a type of image-based sexual
-                    abuse material (DFIAM), separated from child sexual abuse
-                    material (CSAM) only by the (apparent) age of the
-                    victim-survivor depicted. Distribution of DFIAM is illegal
-                    in ___ countries, including ___. Creation of DFIAM is
-                    illegal in ____. Despite this, there were 1,000 websites
-                    distributing DFIAM as of June 2025, and 1,000 websites where
-                    visitors can create DFIAM. 500 of these websites allow the
-                    visitor to create DFIAM of a real individual by uploading a
-                    single photo of the person they want to "nudify". As of
-                    2025, these websites were receiving ___ visits per month.
-                  </div>
-                ) : null}
-              </div>
-              <div>{activeTab == WhoTab.id ? <div>b</div> : null}</div>
-              <div>{activeTab == WhatTab.id ? <div>c</div> : null}</div>
+              <div>{activeTab == IntroTab.id ? <Mission /> : null}</div>
+              <div>{activeTab == WhoTab.id ? <Who /> : null}</div>
+              <div>{activeTab == FiguresTab.id ? <Findings /> : null}</div>
+              <div>{activeTab == WhatTab.id ? <Goals /> : null}</div>
               <div>
                 {activeTab == DonateTab.id ? (
                   <div>
@@ -265,22 +251,6 @@ function App() {
                       At odds, perhaps, with appearances, we are only one person
                       and we have received zero funding.
                     </p>
-                  </div>
-                ) : null}
-              </div>
-              <div>
-                {activeTab == FiguresTab.id ? (
-                  <div>
-                    <div id="chart-container">
-                      <svg
-                        className="chart-svg"
-                        width="561"
-                        height="345"
-                        viewBox="0 0 561 345"
-                        fill="rgb(200,200,200)"
-                      ></svg>
-                      chart here...
-                    </div>
                   </div>
                 ) : null}
               </div>
