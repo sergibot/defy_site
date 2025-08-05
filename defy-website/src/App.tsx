@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Logo}from "./assets/svg/logo"
 import "./App.css";
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     name: string;
     content: string;
     constructor(id: string, name: string, content: string) {
-      this.id = name;
+      this.id = id;
       this.name = name;
       this.content = content;
     }
@@ -79,17 +80,18 @@ As of 2025, these websites were receiving ___ visits per month.
                 color: "black",
                 margin: "0",
                 height: "15vh",
-                fontFamily: "AnotherTypewriter",
+                // fontFamily: "AnotherTypewriter",
                 width: "15vw",
                 placeContent: "center",
                 userSelect: "none",
               }}
             >
-              <h1>DefyAbuse</h1>
+              {/* <h1>DefyAbuse</h1>
               <h2>
                 <span style={{ textDecoration: "underline" }}>Consent</span> is
                 the line.
-              </h2>
+              </h2> */}
+          <Logo/>
             </div>
             <div
               style={{
