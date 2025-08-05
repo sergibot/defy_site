@@ -13,7 +13,7 @@ export function Logo() {
           strokeMiterlimit: "10",
         }}
       >
-        <g id="Artboard1" transform="matrix(1,0,0,1.17834,0,0)">
+        <g transform="matrix(1,0,0,1.17834,0,0)">
           <rect
             x="0"
             y="0"

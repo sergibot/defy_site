@@ -27,6 +27,7 @@ else:
                 tmp = tmp.replace(';',"',")
                 tmp = tmp.replace('stroke-miterlimit','strokeMiterlimit')
                 tmp = tmp.replace('stroke-linecap','strokeLinecap')
+                tmp = tmp.replace('stroke-linejoin','strokeLinejoin')
                 tmp = tmp.replace('stroke-width','strokeWidth')
                 tmp = tmp.replace('fill-rule','fillRule')
                 tmp = tmp.replace('clip-rule','clipRule')

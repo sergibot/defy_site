@@ -1,5 +1,6 @@
 import { useState } from "react";
-import {Logo}from "./assets/svg/logo"
+import { Logo } from "./assets/svg/logo";
+import { TabSVG } from "./assets/svg/tab";
 import "./App.css";
 
 function App() {
@@ -76,22 +77,15 @@ As of 2025, these websites were receiving ___ visits per month.
           >
             <div
               style={{
-                // backgroundColor: "green",
                 color: "black",
                 margin: "0",
                 height: "15vh",
-                // fontFamily: "AnotherTypewriter",
                 width: "15vw",
                 placeContent: "center",
                 userSelect: "none",
               }}
             >
-              {/* <h1>DefyAbuse</h1>
-              <h2>
-                <span style={{ textDecoration: "underline" }}>Consent</span> is
-                the line.
-              </h2> */}
-          <Logo/>
+              <Logo />
             </div>
             <div
               style={{
@@ -109,65 +103,124 @@ As of 2025, these websites were receiving ___ visits per month.
                 return (
                   <div
                     style={{
-                      width: "100%",
+                      width: "20vw",
                       paddingTop: "10px",
                       paddingBottom: "10px",
+                      height: "7vh",
+                      position: "relative",
                     }}
-                    onClick={() => setActiveTab(tab.name)}
+                    onClick={() => setActiveTab(tab.id)}
                   >
                     {activeTab == tab.id ? (
-                      <h2
-                        style={{
-                          fontWeight: "900",
-                          paddingBlock: "20px",
-                          color: "black",
-                          marginRight: "-30px",
-                          paddingRight: "30px",
-                          borderRadius: "35px",
-                          // backgroundColor: "purple",
-                          boxShadow: "inset 0px 0px 15px 2px purple",
-                        }}
-                      >
-                        {tab.name}
-                      </h2>
+                      <div>
+                        <div
+                          style={{
+                            zIndex: 0,
+                            position: "absolute",
+                            height: "7vh",
+                            width: "20vw",
+                            // right: "-100px",
+                            top: 0,
+                          }}
+                        >
+                          <TabSVG />
+                        </div>
+                        <div
+                          style={{
+                            zIndex: 1,
+                            height: "7vh",
+                            width: "10vw",
+                            position: "absolute",
+                            top: 0,
+                            alignContent:'center'
+                          }}
+                        >
+                          <h2
+                            style={{
+                              fontWeight: "900",
+                              // paddingBlock: "20px",
+                              // color: "black",
+                              marginRight: "-30px",
+                              // paddingRight: "30px",
+                              // borderRadius: "35px",
+                              // backgroundColor: "purple",
+                              // boxShadow: "inset 0px 0px 15px 2px purple",
+                            }}
+                          >
+                            {tab.name}
+                          </h2>
+                        </div>
+                      </div>
                     ) : (
-                      <h2
-                        style={{
-                          boxShadow: "inset 0px 0px 81px 81px purple",
-                          // backgroundColor: "pink",
-                          paddingBlock: "10px",
-                          // marginLeft:'130px',
-                          marginRight: "-30px",
-                          textAlign: "right",
-                          paddingRight: "60px",
-                          borderRadius: "25px",
-                        }}
-                      >
-                        {tab.name}
-                      </h2>
+                      <div>
+                        <div
+                          style={{
+                            zIndex: 0,
+                            position: "absolute",
+                            height: "7vh",
+                            width: "20vw",
+                            right: "-150px",
+                            top: 0,
+                          }}
+                        >
+                          <TabSVG />
+                        </div>
+                        <div
+                          style={{
+                            zIndex: 1,
+                            height: "7vh",
+                            width: "10vw",
+                            alignContent:'center',
+                            position: "absolute",
+                            top: 0,
+                          }}
+                        >
+                          <h2
+                            style={{
+                            position: "absolute",
+                              // boxShadow: "inset 0px 0px 81px 81px purple",
+                              // backgroundColor: "pink",
+                              // paddingBlock: "10px",
+                              alignSelf:'center',
+                              // marginLeft:'130px',
+                              right: "-110px",
+                              textAlign: "right",
+                              // paddingRight: "60px",
+                              // borderRadius: "25px",
+                            }}
+                          >
+                            {tab.name}
+                          </h2>
+                        </div>
+                      </div>
                     )}
                   </div>
                 );
               })}
               <div
                 style={{
-                  width: "100%",
+                  width: "70%",
                   paddingTop: "10px",
-                  paddingBottom: "10px",
+                  backgroundColor:'red',
+                  right: "18px",
+                  height:'10vh',
+                  alignSelf:'center',
+                  position:'relative',
+                  border:'25px outset black'
                 }}
-                onClick={() => setActiveTab(DonateTab.name)}
+                onClick={() => setActiveTab(DonateTab.id)}
               >
                 <h2
                   style={{
                     fontWeight: "900",
                     paddingBlock: "20px",
                     color: "black",
-                    marginTop: "25px",
-                    marginRight: "-30px",
-                    paddingRight: "30px",
-                    borderRadius: "35px",
+                    // marginTop: "25px",
+                    // marginRight: "-30px",
+                    // paddingRight: "30px",
+                    // borderRadius: "35px",
                     // backgroundColor: "purple",
-                    boxShadow: "inset 0px 0px 25px 2px red",
+                    // boxShadow: "inset 0px 0px 25px 2px red",
                   }}
                 >
                   {DonateTab.name}
@@ -177,13 +230,15 @@ As of 2025, these websites were receiving ___ visits per month.
           </div>
           <div
             style={{
-              backgroundColor: "red",
+              // backgroundColor: "red",
               // paddingLeft: "2em",
               // paddingRight: "2em",
               // paddingTop: "2em",
               fontFamily: "Cafe",
               // paddingBottom: "2em",
               fontSize: "x-large",
+              backgroundColor: "red",
+              zIndex: 2,
               width: "65vw",
               height: "70vh",
             }}
