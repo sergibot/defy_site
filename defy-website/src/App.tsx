@@ -14,20 +14,7 @@ function App() {
       this.name = name;
     }
   }
-  const IntroTab = new Tab(
-    "intro",
-    "Mission Statement",
-    `DeepfAIke "porn" (DFIAM) is a type of image-based sexual abuse material (DFIAM), separated from child sexual abuse material (CSAM) only by the (apparent) age of the victim-survivor depicted.
-Distribution of DFIAM is illegal in ___ countries, including ___.
-Creation of DFIAM is illegal in ____.
-
-Despite this, there were 1,000 websites distributing DFIAM as of June 2025, and 1,000 websites where visitors can create DFIAM.
-
-500 of these websites allow the visitor to create DFIAM of a real individual by uploading a single photo of the person they want to "nudify". 
-As of 2025, these websites were receiving ___ visits per month.
-
-`
-  );
+  const IntroTab = new Tab("intro", "Mission Statement");
   // at DefyAbuse.org we are the only entity monitoring the proliferation of DFIAM.
 
   // We are doing our best to tackle it: outside of annually collecting and combing through thousands of websites (at minimum 18,000 urls per year), we have advised the home office vawg team and the dist etc
@@ -35,10 +22,7 @@ As of 2025, these websites were receiving ___ visits per month.
   const FiguresTab = new Tab("figures", "Research Findings");
   const WhoTab = new Tab("who", "Who Are We?");
   const WhatTab = new Tab("what", "Our Next Goals");
-  const DonateTab = new Tab(
-    "donate",
-    "Keep Our Lights On!"
-  );
+  const DonateTab = new Tab("donate", "Keep Our Lights On!");
   const tabs = [IntroTab, FiguresTab, WhoTab, WhatTab];
   return (
     <>
@@ -124,9 +108,9 @@ As of 2025, these websites were receiving ___ visits per month.
                             width: "10vw",
                             position: "absolute",
                             top: 0,
-                            left: '75px',
+                            left: "75px",
                             alignContent: "center",
-                            textAlign:'left'
+                            textAlign: "left",
                           }}
                         >
                           <h2
@@ -181,32 +165,60 @@ As of 2025, these websites were receiving ___ visits per month.
                 );
               })}
             </div>
-            <div
-              style={{
-                width: "80%",
-                // paddingTop: "10px",
-                // backgroundColor: "red",
-                backgroundColor: "rgb(50,220,94)",
-                right: "18px",
-                height: "15vh",
-                alignSelf: "center",
-                alignContent: "center",
-                position: "relative",
-                borderRadius: "5px",
-                border: "9px solid rgb(35,31,32)",
-              }}
-              onClick={() => setActiveTab(DonateTab.id)}
-            >
-              <h2
+            {activeTab == DonateTab.id ? (
+              <div
                 style={{
-                  fontFamily: "AnotherTypewriter",
-                  fontWeight: "900",
-                  color: "black",
+                  width: "80%",
+                  backgroundColor: "rgb(50,220,94)",
+                  right: "18px",
+                  height: "15vh",
+                  alignSelf: "center",
+                  alignContent: "center",
+                  position: "relative",
+                  borderRadius: "5px",
+                  border: "9px solid rgb(35,31,32)",
                 }}
+                onClick={() => setActiveTab(DonateTab.id)}
               >
-                {DonateTab.name}
-              </h2>
-            </div>
+                <h2
+                  style={{
+                    fontFamily: "AnotherTypewriter",
+                    fontWeight: "900",
+                    color: "black",
+                    textShadow:'0px 0px 1px white, 0 0 25px white, 0 0 5px white'
+                  }}
+                >
+                  {DonateTab.name}
+                </h2>
+              </div>
+            ) : (
+              <div
+                style={{
+                  width: "80%",
+                  backgroundColor: "black",
+                  right: "18px",
+                  height: "15vh",
+                  alignSelf: "center",
+                  alignContent: "center",
+                  position: "relative",
+                  borderRadius: "5px",
+                  animation:'tremble 4000ms',
+                  animationIterationCount:'infinite',
+                  border: "9px solid rgb(35,31,32)",
+                }}
+                onClick={() => setActiveTab(DonateTab.id)}
+              >
+                <h2
+                  style={{
+                    fontFamily: "AnotherTypewriter",
+                    fontWeight: "900",
+                    color: "rgb(50,220,94)",
+                  }}
+                >
+                  {DonateTab.name}
+                </h2>
+              </div>
+            )}
           </div>
           <div
             style={{
@@ -229,39 +241,46 @@ As of 2025, these websites were receiving ___ visits per month.
             >
               <div>
                 {activeTab == IntroTab.id ? (
-                  <div>a</div>
+                  <div>
+                    DeepfAIke "porn" (DFIAM) is a type of image-based sexual
+                    abuse material (DFIAM), separated from child sexual abuse
+                    material (CSAM) only by the (apparent) age of the
+                    victim-survivor depicted. Distribution of DFIAM is illegal
+                    in ___ countries, including ___. Creation of DFIAM is
+                    illegal in ____. Despite this, there were 1,000 websites
+                    distributing DFIAM as of June 2025, and 1,000 websites where
+                    visitors can create DFIAM. 500 of these websites allow the
+                    visitor to create DFIAM of a real individual by uploading a
+                    single photo of the person they want to "nudify". As of
+                    2025, these websites were receiving ___ visits per month.
+                  </div>
                 ) : null}
               </div>
-              <div>
-                {activeTab == WhoTab.id ? (
-                  <div>b</div>
-                ) : null}
-              </div>
-              <div>
-                {activeTab == WhatTab.id ? (
-                  <div>c</div>
-                ) : null}
-              </div>
+              <div>{activeTab == WhoTab.id ? <div>b</div> : null}</div>
+              <div>{activeTab == WhatTab.id ? <div>c</div> : null}</div>
               <div>
                 {activeTab == DonateTab.id ? (
                   <div>
-    "Despite our professional look, we are only one person and we have received zero funding. "
+                    <p>
+                      At odds, perhaps, with appearances, we are only one person
+                      and we have received zero funding.
+                    </p>
                   </div>
                 ) : null}
               </div>
               <div>
                 {activeTab == FiguresTab.id ? (
                   <div>
-                    <div id='chart-container'>
-                    <svg
-                      className="chart-svg"
-                      width="561"
-                      height="345"
-                      viewBox="0 0 561 345"
-                      fill="rgb(200,200,200)"
-                    ></svg>
-                    chart here...
-                  </div>
+                    <div id="chart-container">
+                      <svg
+                        className="chart-svg"
+                        width="561"
+                        height="345"
+                        viewBox="0 0 561 345"
+                        fill="rgb(200,200,200)"
+                      ></svg>
+                      chart here...
+                    </div>
                   </div>
                 ) : null}
               </div>

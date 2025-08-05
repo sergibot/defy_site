@@ -24,3 +24,27 @@
   font-family: 'HighWay';
   src: local('HWYGWDE'), url('../assets/fonts/HWYGWDE.ttf');
 }
+
+@keyframes tremble {
+  34% {
+    transform: rotate(0deg)
+  }
+  37% {
+    transform: rotate(0.5deg)
+  }
+  45% {
+    transform: rotate(0deg)
+  }
+  71% {
+    transform: rotate(0deg)
+  }
+  75% {
+    transform: rotate(-0.5deg)
+  }
+  82% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}
