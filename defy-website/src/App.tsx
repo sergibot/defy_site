@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Logo } from "./assets/svg/logo";
 import { TabSVG } from "./assets/svg/tab";
 import "./App.css";
+import Scatterplot from './components/d3/tmp'
 
 function App() {
   const [activeTab, setActiveTab] = useState("intro");
@@ -38,7 +39,7 @@ As of 2025, these websites were receiving ___ visits per month.
   const WhatTab = new Tab("what", "What We Do", "what content here");
   const DonateTab = new Tab(
     "donate",
-    "We Need Your Help",
+    "Keep Our Lights On!",
     "Despite our professional look, we are only one person and we have received zero funding. "
   );
   const tabs = [IntroTab, FiguresTab, WhoTab, WhatTab];
@@ -48,7 +49,7 @@ As of 2025, these websites were receiving ___ visits per month.
         style={{
           height: "100vh",
           width: "100vw",
-          backgroundColor: "grey",
+          backgroundColor: "rgb(240,240,240)",
           placeItems: "center",
           placeContent: "center",
         }}
@@ -60,17 +61,14 @@ As of 2025, these websites were receiving ___ visits per month.
             backgroundColor: "white",
             height: "75vh",
             width: "83vw",
-            boxShadow: "0px 0px 50px 20px white",
+            boxShadow: "0px 0px 50px 20px grey",
             placeItems: "center",
             placeContent: "center",
-            // box-shadow: 20px -5px 32px 35px #70D7E0;
-            // boxShadow:'20px 5px 5px red',
           }}
         >
           <div
             style={{
               height: "70vh",
-              // backgroundColor: "brown",
               display: "flex",
               flexDirection: "column",
             }}
@@ -89,14 +87,12 @@ As of 2025, these websites were receiving ___ visits per month.
             </div>
             <div
               style={{
-                // backgroundColor: "blue",
                 display: "flex",
                 flexDirection: "column",
                 paddingTop: "2em",
                 paddingBottom: "2em",
-                fontFamily: "HighWay",
-                width: "15vw",
-                userSelect: "none",
+                fontFamily: "Cafe",
+                width: "12vw",
               }}
             >
               {tabs.map(function (tab) {
@@ -119,7 +115,6 @@ As of 2025, these websites were receiving ___ visits per month.
                             position: "absolute",
                             height: "7vh",
                             width: "20vw",
-                            // right: "-100px",
                             top: 0,
                           }}
                         >
@@ -132,19 +127,13 @@ As of 2025, these websites were receiving ___ visits per month.
                             width: "10vw",
                             position: "absolute",
                             top: 0,
-                            alignContent:'center'
+                            alignContent: "center",
                           }}
                         >
                           <h2
                             style={{
                               fontWeight: "900",
-                              // paddingBlock: "20px",
-                              // color: "black",
                               marginRight: "-30px",
-                              // paddingRight: "30px",
-                              // borderRadius: "35px",
-                              // backgroundColor: "purple",
-                              // boxShadow: "inset 0px 0px 15px 2px purple",
                             }}
                           >
                             {tab.name}
@@ -163,30 +152,25 @@ As of 2025, these websites were receiving ___ visits per month.
                             top: 0,
                           }}
                         >
-                          <TabSVG />
+                          {/* <TabSVG /> */}
                         </div>
                         <div
                           style={{
                             zIndex: 1,
                             height: "7vh",
                             width: "10vw",
-                            alignContent:'center',
+                            alignContent: "center",
                             position: "absolute",
                             top: 0,
                           }}
                         >
                           <h2
                             style={{
-                            position: "absolute",
-                              // boxShadow: "inset 0px 0px 81px 81px purple",
-                              // backgroundColor: "pink",
-                              // paddingBlock: "10px",
-                              alignSelf:'center',
-                              // marginLeft:'130px',
+                              position: "absolute",
+                              alignSelf: "center",
                               right: "-110px",
                               textAlign: "right",
-                              // paddingRight: "60px",
-                              // borderRadius: "25px",
+                              color: "rgb(35,31,32)",
                             }}
                           >
                             {tab.name}
@@ -197,47 +181,40 @@ As of 2025, these websites were receiving ___ visits per month.
                   </div>
                 );
               })}
-              <div
+            </div>
+            <div
+              style={{
+                width: "80%",
+                // paddingTop: "10px",
+                // backgroundColor: "red",
+                backgroundColor: "rgb(50,220,94)",
+                right: "18px",
+                height: "15vh",
+                alignSelf: "center",
+                alignContent: "center",
+                position: "relative",
+                borderRadius: "5px",
+                border:'9px solid rgb(35,31,32)'
+              }}
+              onClick={() => setActiveTab(DonateTab.id)}
+            >
+              <h2
                 style={{
-                  width: "70%",
-                  paddingTop: "10px",
-                  backgroundColor:'red',
-                  right: "18px",
-                  height:'10vh',
-                  alignSelf:'center',
-                  position:'relative',
-                  border:'25px outset black'
+                  fontFamily: "AnotherTypewriter",
+                  fontWeight: "900",
+                  color: "black",
                 }}
-                onClick={() => setActiveTab(DonateTab.id)}
               >
-                <h2
-                  style={{
-                    fontWeight: "900",
-                    paddingBlock: "20px",
-                    color: "black",
-                    // marginTop: "25px",
-                    // marginRight: "-30px",
-                    // paddingRight: "30px",
-                    // borderRadius: "35px",
-                    // backgroundColor: "purple",
-                    // boxShadow: "inset 0px 0px 25px 2px red",
-                  }}
-                >
-                  {DonateTab.name}
-                </h2>
-              </div>
+                {DonateTab.name}
+              </h2>
             </div>
           </div>
           <div
             style={{
-              // backgroundColor: "red",
-              // paddingLeft: "2em",
-              // paddingRight: "2em",
-              // paddingTop: "2em",
               fontFamily: "Cafe",
-              // paddingBottom: "2em",
               fontSize: "x-large",
-              backgroundColor: "red",
+              backgroundColor: "white",
+              border:'4px solid rgb(35,31,32)',
               zIndex: 2,
               width: "65vw",
               height: "70vh",
@@ -248,6 +225,7 @@ As of 2025, these websites were receiving ___ visits per month.
                 paddingBlock: "50px",
                 paddingLeft: "50px",
                 paddingRight: "50px",
+                color:'rgb(35,31,32)'
               }}
             >
               {tabs.map(function (tab) {
@@ -261,6 +239,7 @@ As of 2025, these websites were receiving ___ visits per month.
                 {activeTab == DonateTab.id ? (
                   <div>{DonateTab.content}</div>
                 ) : null}
+              <Scatterplot/>
               </div>
             </div>
           </div>
