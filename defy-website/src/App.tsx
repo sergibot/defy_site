@@ -2,23 +2,21 @@ import { useState } from "react";
 import { Logo } from "./assets/svg/logo";
 import { TabSVG } from "./assets/svg/tab";
 import "./App.css";
-import Scatterplot from './components/d3/tmp'
+// https://2019.wattenberger.com/blog/react-and-d3
 
 function App() {
   const [activeTab, setActiveTab] = useState("intro");
   class Tab {
     id: string;
     name: string;
-    content: string;
-    constructor(id: string, name: string, content: string) {
+    constructor(id: string, name: string) {
       this.id = id;
       this.name = name;
-      this.content = content;
     }
   }
   const IntroTab = new Tab(
     "intro",
-    "Introduction",
+    "Mission Statement",
     `DeepfAIke "porn" (DFIAM) is a type of image-based sexual abuse material (DFIAM), separated from child sexual abuse material (CSAM) only by the (apparent) age of the victim-survivor depicted.
 Distribution of DFIAM is illegal in ___ countries, including ___.
 Creation of DFIAM is illegal in ____.
@@ -34,13 +32,12 @@ As of 2025, these websites were receiving ___ visits per month.
 
   // We are doing our best to tackle it: outside of annually collecting and combing through thousands of websites (at minimum 18,000 urls per year), we have advised the home office vawg team and the dist etc
 
-  const FiguresTab = new Tab("figures", "Figures", "figures content here");
-  const WhoTab = new Tab("who", "Who We Are", "who content here");
-  const WhatTab = new Tab("what", "What We Do", "what content here");
+  const FiguresTab = new Tab("figures", "Research Findings");
+  const WhoTab = new Tab("who", "Who Are We?");
+  const WhatTab = new Tab("what", "Our Next Goals");
   const DonateTab = new Tab(
     "donate",
-    "Keep Our Lights On!",
-    "Despite our professional look, we are only one person and we have received zero funding. "
+    "Keep Our Lights On!"
   );
   const tabs = [IntroTab, FiguresTab, WhoTab, WhatTab];
   return (
@@ -127,7 +124,9 @@ As of 2025, these websites were receiving ___ visits per month.
                             width: "10vw",
                             position: "absolute",
                             top: 0,
+                            left: '75px',
                             alignContent: "center",
+                            textAlign:'left'
                           }}
                         >
                           <h2
@@ -194,7 +193,7 @@ As of 2025, these websites were receiving ___ visits per month.
                 alignContent: "center",
                 position: "relative",
                 borderRadius: "5px",
-                border:'9px solid rgb(35,31,32)'
+                border: "9px solid rgb(35,31,32)",
               }}
               onClick={() => setActiveTab(DonateTab.id)}
             >
@@ -214,7 +213,7 @@ As of 2025, these websites were receiving ___ visits per month.
               fontFamily: "Cafe",
               fontSize: "x-large",
               backgroundColor: "white",
-              border:'4px solid rgb(35,31,32)',
+              border: "4px solid rgb(35,31,32)",
               zIndex: 2,
               width: "65vw",
               height: "70vh",
@@ -225,21 +224,46 @@ As of 2025, these websites were receiving ___ visits per month.
                 paddingBlock: "50px",
                 paddingLeft: "50px",
                 paddingRight: "50px",
-                color:'rgb(35,31,32)'
+                color: "rgb(35,31,32)",
               }}
             >
-              {tabs.map(function (tab) {
-                return (
-                  <div>
-                    {activeTab == tab.id ? <div>{tab.content}</div> : null}
-                  </div>
-                );
-              })}
+              <div>
+                {activeTab == IntroTab.id ? (
+                  <div>a</div>
+                ) : null}
+              </div>
+              <div>
+                {activeTab == WhoTab.id ? (
+                  <div>b</div>
+                ) : null}
+              </div>
+              <div>
+                {activeTab == WhatTab.id ? (
+                  <div>c</div>
+                ) : null}
+              </div>
               <div>
                 {activeTab == DonateTab.id ? (
-                  <div>{DonateTab.content}</div>
+                  <div>
+    "Despite our professional look, we are only one person and we have received zero funding. "
+                  </div>
                 ) : null}
-              <Scatterplot/>
+              </div>
+              <div>
+                {activeTab == FiguresTab.id ? (
+                  <div>
+                    <div id='chart-container'>
+                    <svg
+                      className="chart-svg"
+                      width="561"
+                      height="345"
+                      viewBox="0 0 561 345"
+                      fill="rgb(200,200,200)"
+                    ></svg>
+                    chart here...
+                  </div>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
