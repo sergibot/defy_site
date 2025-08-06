@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Logo } from "./assets/svg/logo";
-import { TabSVG } from "./assets/svg/tab";
+import { Logo } from "./assets/jsx_of_svg/logo";
+import { TabSVG } from "./assets/jsx_of_svg/tab";
 import Findings from "./components/findings";
 import Mission from "./components/mission";
 import Who from "./components/who";

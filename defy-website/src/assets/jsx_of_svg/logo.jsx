@@ -24,7 +24,7 @@ export function Logo() {
           <clipPath id="_clip1">
             <rect x="0" y="0" width="2437.05" height="1083.97" />
           </clipPath>
-          <g clip-path="url(#_clip1)">
+          <g clipPath="url(#_clip1)">
             <g
               id="Layer-1"
               transform="matrix(4.16667,0,0,3.53606,0,60.4895)"

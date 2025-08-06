@@ -1,7 +1,18 @@
+import Gg_trends from "../assets/jsx_of_svg/gg_trends";
+
 function Mission() {
   return (
     <div>
-      <div>
+      <h2>Despite the lack of headlines, 'deepfake porn' has not gone away.</h2>
+      <h3>
+        We have been monitoring it using a systematic and rigorous academic
+        methodology since 2021.
+      </h3>
+      <div style={{maxHeight:'30vh',width:'30vw'}}>
+        <Gg_trends />
+      </div>
+
+      {/* <div>
         DeepfAIke "porn" (DFIAM) is a type of image-based sexual abuse material
         (DFIAM), separated from child sexual abuse material (CSAM) only by the
         (apparent) age of the victim-survivor depicted. Distribution of DFIAM is
@@ -16,7 +27,7 @@ function Mission() {
         collecting and combing through thousands of websites (at minimum 18,000
         urls per year), we have advised the home office vawg team and the dist
         etc
-      </div>
+      </div> */}
     </div>
   );
 }
