@@ -215,8 +215,8 @@ function App() {
             flexDirection: "column",
             backgroundColor: "blue",
             placeContent: "center",
-            placeSelf: "center",
             // placeItems: "center",
+            placeSelf: "center",
           }}
         >
           <div
@@ -333,61 +333,73 @@ function App() {
               );
             })}
           </div>
-          {activeTab == DonateTab.id ? (
-            <div
-              style={{
-                width: "80%",
-                backgroundColor: "rgb(50,220,94)",
-                right: "18px",
-                height: "15vh",
-                placeSelf: "center",
-                placeContent: "center",
-                position: "relative",
-                borderRadius: "5px",
-                border: "9px solid rgb(35,31,32)",
-              }}
-              onClick={() => setActiveTab(DonateTab.id)}
-            >
-              <h2
+          <div
+            style={{
+              width: "80%",
+              right: "18px",
+              height: "10vh",
+              placeSelf: "center",
+              placeContent: "center",
+            }}
+          >
+            {activeTab == DonateTab.id ? (
+              <div
                 style={{
-                  fontFamily: "AnotherTypewriter",
-                  fontWeight: "900",
-                  color: "black",
-                  textShadow:
-                    "0px 0px 1px white, 0 0 25px white, 0 0 5px white",
+                  height: "100%",
+                  backgroundColor: "rgb(50,220,94)",
+                  placeSelf: "center",
+                  placeContent: "center",
+                  paddingLeft:'2em',
+                  paddingRight:'2em',
+                  borderRadius: "5px",
+                  border: "9px solid rgb(35,31,32)",
                 }}
+                onClick={() => setActiveTab(DonateTab.id)}
               >
-                {DonateTab.name}
-              </h2>
-            </div>
-          ) : (
-            <div
-              style={{
-                width: "80%",
-                backgroundColor: "black",
-                right: "18px",
-                height: "15vh",
-                placeSelf: "center",
-                placeContent: "center",
-                position: "relative",
-                borderRadius: "5px",
-                animation: "tremble 4000ms",
-                animationIterationCount: "infinite",
-                border: "9px solid rgb(35,31,32)",
-              }}
-              onClick={() => setActiveTab(DonateTab.id)}
-            >
-              <h2
+                <h2
+                  style={{
+                    fontFamily: "AnotherTypewriter",
+                    fontWeight: "900",
+                    color: "black",
+                    textShadow:
+                      "0px 0px 1px white, 0 0 25px white, 0 0 5px white",
+                  }}
+                >
+                  {/* {DonateTab.name} */}
+                  {/* Keep Our \nLights On! */}
+                  Keep Our <br/>Lights On!
+                </h2>
+              </div>
+            ) : (
+              <div
                 style={{
-                  fontFamily: "AnotherTypewriter",
-                  fontWeight: "900",
-                  color: "rgb(50,220,94)",
+                  height: "100%",
+                  backgroundColor: "black",
+                  placeSelf: "center",
+                  placeContent: "center",
+                  position: "relative",
+                  borderRadius: "5px",
+                  paddingLeft:'2em',
+                  paddingRight:'2em',
+                  animation: "tremble 4000ms",
+                  animationIterationCount: "infinite",
+                  border: "9px solid rgb(35,31,32)",
                 }}
+                onClick={() => setActiveTab(DonateTab.id)}
               >
-                {DonateTab.name}
-              </h2>
-            </div>
-          )}
+                <h2
+                  style={{
+                    fontFamily: "AnotherTypewriter",
+                    fontWeight: "900",
+                    color: "rgb(50,220,94)",
+                  }}
+                >
+                  {/* {DonateTab.name} */}
+                  Keep Our <br/>Lights On!
+                </h2>
+              </div>
+            )}
+          </div>
         </div>
       </>
     );
