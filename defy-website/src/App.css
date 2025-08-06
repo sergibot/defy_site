@@ -6,45 +6,66 @@
 }
 
 @font-face {
-  font-family: 'AnotherTypewriter';
-  src: local('AnotherTypewriter'), url('../assets/fonts/atwriter.ttf');
+  font-family: "AnotherTypewriter";
+  src: local("AnotherTypewriter"), url("../assets/fonts/atwriter.ttf");
 }
 
 @font-face {
-  font-family: 'Cafe';
-  src: local('Louis George Cafe'), url('../assets/fonts/Louis George Cafe.ttf');
+  font-family: "Cafe";
+  src: local("Louis George Cafe"), url("../assets/fonts/Louis George Cafe.ttf");
 }
 
 @font-face {
-  font-family: 'Quicksand';
-  src: local('Quicksand'), url('../assets/fonts/Quicksand_Book.otf');
+  font-family: "Quicksand";
+  src: local("Quicksand"), url("../assets/fonts/Quicksand_Book.otf");
 }
 
 @font-face {
-  font-family: 'HighWay';
-  src: local('HWYGWDE'), url('../assets/fonts/HWYGWDE.ttf');
+  font-family: "HighWay";
+  src: local("HWYGWDE"), url("../assets/fonts/HWYGWDE.ttf");
 }
 
 @keyframes tremble {
   34% {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
   37% {
-    transform: rotate(0.5deg)
+    transform: rotate(0.5deg);
   }
   45% {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
   71% {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
   75% {
-    transform: rotate(-0.5deg)
+    transform: rotate(-0.5deg);
   }
   82% {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 1224) {
+  #centre_panel {
+    /* background-color: lightblue; */
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+@media (min-width: 1225px) {
+  #centre_panel {
+    /* background-color: lightblue; */
+    height: 75vh;
+    width: 83vw;
+    box-shadow: 0px 0px 50px 20px grey;
+  }
+  #main_panel {
+    width: 65vw;
+    height: 70vh;
   }
 }

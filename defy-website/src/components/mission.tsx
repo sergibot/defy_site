@@ -3,15 +3,24 @@ import Gg_trends from "../assets/jsx_of_svg/gg_trends";
 function Mission() {
   return (
     <div>
-      <h2>Despite the lack of headlines, 'deepfake porn' has not gone away.</h2>
-      <h3>
-        We have been monitoring it using a systematic and rigorous academic
-        methodology since 2021.
-      </h3>
-      <div style={{maxHeight:'30vh',width:'30vw'}}>
-        <Gg_trends />
+      <div>
+        <div>
+          <p>Headlines</p>
+        <button>sdfs</button>
+        </div>
+        <div>
+          <h2>
+            Despite the lack of headlines, 'deepfake porn' has not gone away.
+          </h2>
+          <h3>
+            We have been monitoring it using a systematic and rigorous academic
+            methodology since 2021.
+          </h3>
+          <div style={{ maxHeight: "30vh", width: "30vw" }}>
+            <Gg_trends />
+          </div>
+        </div>
       </div>
-
       {/* <div>
         DeepfAIke "porn" (DFIAM) is a type of image-based sexual abuse material
         (DFIAM), separated from child sexual abuse material (CSAM) only by the
