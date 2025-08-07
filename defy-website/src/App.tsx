@@ -6,6 +6,11 @@ import Donate from "./components/donate";
 import Mission from "./components/mission";
 import Who from "./components/who";
 import Goals from "./components/goals";
+import Search from "./assets/jsx_of_svg/search";
+import Globe from "./assets/jsx_of_svg/globe";
+import Crosshairs from "./assets/jsx_of_svg/crosshairs";
+import SheriffsBadge from "./assets/jsx_of_svg/sheriffs_badge";
+import Flame from "./assets/jsx_of_svg/flame2";
 import "./App.css";
 // https://2019.wattenberger.com/blog/react-and-d3
 
@@ -20,6 +25,7 @@ function App() {
         <div
           id="topbar"
           style={{
+            width: "90vw",
             height: "10vh",
             display: "flex",
             flexDirection: "row",
@@ -29,36 +35,24 @@ function App() {
             placeItems: "center",
           }}
         >
-          <div
-            id="logo"
-            style={{
-              color: "black",
-              margin: "0",
-              height: "90%",
-              width: "auto",
-              paddingTop: "5%",
-              paddingBottom: "5%",
-              placeContent: "center",
-              placeSelf: "center",
-              userSelect: "none",
-            }}
+          <button style={{ marginBlock: "2%", backgroundColor: "white" }}>
+            <SheriffsBadge />
+          </button>
+          <button style={{ marginBlock: "2%", backgroundColor: "white" }}>
+            <Search />
+          </button>
+          <button style={{ marginBlock: "2%", backgroundColor: "white" }}>
+            <Globe />
+          </button>
+          <button style={{ marginBlock: "2%", backgroundColor: "white" }}>
+            <Crosshairs />
+          </button>
+          <button
+            style={{ marginBlock: "2%", backgroundColor: "white" }}
             onClick={() => setActiveTab(DonateTab.id)}
           >
-            {/* {isBigScreen && <Logo />} */}
-            <Logo />
-          </div>
-          <div style={{ marginLeft: "2em" }}>
-            <button>mission</button>
-            <button>research</button>
-            <button>who</button>
-            <button>goals</button>
-          </div>
-          <div
-            style={{ marginLeft: "2em" }}
-            onClick={() => setActiveTab(DonateTab.id)}
-          >
-            <button>donate!</button>
-          </div>
+            <Flame />
+          </button>
         </div>
       </>
     );
