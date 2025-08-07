@@ -25,34 +25,45 @@ function App() {
         <div
           id="topbar"
           style={{
-            width: "90vw",
-            height: "10vh",
+            // width: "98vw",
+            height: "12vh",
             display: "flex",
             flexDirection: "row",
-            // backgroundColor: "blue",
             placeContent: "center",
-            placeSelf: "center",
             placeItems: "center",
+            placeSelf: "center",
           }}
         >
-          <button style={{ marginBlock: "2%", backgroundColor: "white" }}>
+          <div
+            style={{ width: "20vw", height: "10vh" }}
+            onClick={() => setActiveTab(IntroTab.id)}
+          >
             <SheriffsBadge />
-          </button>
-          <button style={{ marginBlock: "2%", backgroundColor: "white" }}>
+          </div>
+          <div
+            style={{ width: "20vw", height: "10vh" }}
+            onClick={() => setActiveTab(FiguresTab.id)}
+          >
             <Search />
-          </button>
-          <button style={{ marginBlock: "2%", backgroundColor: "white" }}>
+          </div>
+          <div
+            style={{ width: "20vw", height: "10vh" }}
+            onClick={() => setActiveTab(WhoTab.id)}
+          >
             <Globe />
-          </button>
-          <button style={{ marginBlock: "2%", backgroundColor: "white" }}>
+          </div>
+          <div
+            style={{ width: "20vw", height: "10vh" }}
+            onClick={() => setActiveTab(GoalsTab.id)}
+          >
             <Crosshairs />
-          </button>
-          <button
-            style={{ marginBlock: "2%", backgroundColor: "white" }}
+          </div>
+          <div
+            style={{ width: "20vw", height: "10vh" }}
             onClick={() => setActiveTab(DonateTab.id)}
           >
             <Flame />
-          </button>
+          </div>
         </div>
       </>
     );
@@ -269,7 +280,7 @@ function App() {
             <div>{activeTab == IntroTab.id ? <Mission /> : null}</div>
             <div>{activeTab == WhoTab.id ? <Who /> : null}</div>
             <div>{activeTab == FiguresTab.id ? <Findings /> : null}</div>
-            <div>{activeTab == WhatTab.id ? <Goals /> : null}</div>
+            <div>{activeTab == GoalsTab.id ? <Goals /> : null}</div>
             <div>{activeTab == DonateTab.id ? <Donate /> : null}</div>
           </div>
         </div>
@@ -293,9 +304,9 @@ function App() {
   const IntroTab = new Tab("intro", "Mission");
   const FiguresTab = new Tab("figures", "Research");
   const WhoTab = new Tab("who", "Who");
-  const WhatTab = new Tab("what", "Goals");
+  const GoalsTab = new Tab("what", "Goals");
   const DonateTab = new Tab("donate", "Donate");
-  const tabs = [IntroTab, FiguresTab, WhoTab, WhatTab];
+  const tabs = [IntroTab, FiguresTab, WhoTab, GoalsTab];
   return (
     <>
       <div
@@ -328,8 +339,8 @@ function App() {
             id="centre_panel"
             style={{
               display: "flex",
-              placeItems: "center",
-              placeContent: "center",
+              // placeItems: "center",
+              // placeContent: "center",
               flexDirection: "column",
             }}
           >

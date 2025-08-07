@@ -12,7 +12,7 @@ export default function Search() {
         }}
         width="100%"
         version="1.1"
-        viewBox="0 0 16 16"
+        viewBox="0 1 16 14.5"
         xmlns="http://www.w3.org/2000/svg"
         xmlSpace="preserve"
       >
@@ -20,7 +20,7 @@ export default function Search() {
           <circle
             style={{
               fill: "none",
-              stroke: "rgb(76,76,76)",
+              stroke: "rgb(35,31,32)",
               strokeWidth: "1.04px",
             }}
             cx="7.494"
@@ -32,7 +32,7 @@ export default function Search() {
           <path
             style={{
               fill: "none",
-              stroke: "rgb(76,76,76)",
+              stroke: "rgb(35,31,32)",
               strokeWidth: "10.37px",
             }}
             d="M-0.002,0.005L16.005,15.993"

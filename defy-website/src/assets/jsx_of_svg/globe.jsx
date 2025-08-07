@@ -6,7 +6,7 @@ export default function Globe() {
         height="100%"
         width="100%"
         fill="none"
-        stroke="currentColor"
+        stroke="rgb(35,31,32)"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
