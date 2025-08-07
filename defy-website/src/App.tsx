@@ -13,8 +13,8 @@ import SheriffsBadge from "./assets/jsx_of_svg/sheriffs_badge";
 import Flame from "./assets/jsx_of_svg/flame2";
 import "./App.css";
 // https://2019.wattenberger.com/blog/react-and-d3
-
 import { useMediaQuery } from "react-responsive";
+
 
 function App() {
   const [activeTab, setActiveTab] = useState("intro");
