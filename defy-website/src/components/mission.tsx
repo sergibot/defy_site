@@ -17,32 +17,19 @@ import DfiaSites from "../assets/jsx_of_svg/dfia_sites";
 // 1.0% (95% CI = 0.8% − 1.3%) reported threatening to post, send, or share deepfake pornography, and
 // 0.7% (95% CI = 0.5% − 0.9%) reported actually posting, sending, or sharing deepfake pornography content.
 
-function Mission() {
-  return (
-    <div>
-      <h2>DFIAM is a serious yet unmonitored harm.</h2>
-      <div>
-        In mid-2023, an academic survey of over 16,000 participants across 10
-        countries found that 2.2% of participants were victim-survivors of
-        deepfake image-based sexual abuse. 1.8% of participants admitted to
-        perpetrating this sort of abuse. However, these numbers were taken
-        before the AI bubble had begun to hit. The numbers today are not
-        available - yet another product of the AI overwhelm, but a critical one
-        for understanding the amount of harm that this type of sexual abuse is
-        wreaking globally.
-      </div>
-      <div>
-        <button>link to study</button>
-      </div>
-      <div>
-        <button>click here for graph</button>
-      </div>
-      <div>
-        <table>
+function Mission(importedFunc) {
+  function TableFromStudy() {
+    return (
+      <>
+        <table style={{ width: "100%", marginTop: "1em", textAlign: "center" }}>
           <tr>
             <th>Country</th>
-            <th colSpan={2}>Victims</th>
-            <th colSpan={2}>Perpetrators</th>
+            <th colSpan={2} style={{ textAlign: "left" }}>
+              Victims
+            </th>
+            <th colSpan={2} style={{ textAlign: "left" }}>
+              Perpetrators
+            </th>
             <th>Population</th>
           </tr>
           <tr>
@@ -134,7 +121,7 @@ function Mission() {
             <td>9,209,116</td>
           </tr>
           <tr>
-            <td>Totalled</td>
+            <td>Above Totalled</td>
             <td>2.2</td>
             <td>13,194,907</td>
             <td>1.8</td>
@@ -142,80 +129,189 @@ function Mission() {
             <td>583,731,797</td>
           </tr>
           <tr>
-            <td>Globe (age 15+)</td>
+            <td style={{ backgroundColor: "#eeeeee" }}>Globe (age 15+)</td>
             <td>2.2</td>
-            <td>136,310,574</td>
+            <td style={{ backgroundColor: "#eeeeee" }}>136,310,574</td>
             <td>1.8</td>
-            <td>111,526,833</td>
+            <td style={{ backgroundColor: "#eeeeee" }}>111,526,833</td>
             <td>6,195,935,158</td>
           </tr>
         </table>
+      </>
+    );
+  }
+  return (
+    <div style={{ marginTop: "2em", marginBottom: "2em" }}>
+      <div className="banner">
+        <h2>DFIAM is a serious yet unmonitored harm.</h2>
       </div>
-      {/* <GgTrends/> */}
-      {/* <div
-        id="site_graph_container"
-        style={{
-          objectFit: "contain",
-          height: "60vh",
-          width: "auto",
-          backgroundColor: "blue",
-        }}
-      >
-        <DfiaSites />
-      </div> */}
+      <div className="copy">
+        <p>
+          In mid-2023,{" "}
+          <a
+            href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642382"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            an academic survey
+          </a>{" "}
+          of over 16,000 participants across 10 countries found that:
+        </p>{" "}
+        <br />
+        <p>
+          2.2% of participants were victim-survivors of deepfake image-based
+          sexual abuse;{" "}
+        </p>{" "}
+        <br />
+        <p>
+          1.8% of participants openly admitted to perpetrating this sort of
+          abuse.{" "}
+        </p>{" "}
+        <br />
+        <p>
+          Extrapolating from this survey's findings indicates that over a
+          hundred million adults worldwide would have been victim-survivors of
+          DFIA in mid-2023. This study is the only one of its kind; research in
+          this area is sparse to non-existent.
+        </p>
+        <br />
+        <p>
+          The above survey was also unfortunately conducted before the
+          'Generative AI' bubble, and similar studies have not since emerged
+          despite the supercharging effect that this bubble has had on DFIA
+          production and distribution.
+          {/* However, much has unfortunately changed for the worse since */}
+          {/* that survey. */}
+        </p>
+        <div>
+          <TableFromStudy />
+        </div>
+      </div>
+      <div className="banner">
+        <h2>...Unmonitored, except by DefyAbuse.org</h2>
+      </div>
+      <div className="copy">
+        <p>
+          Our research shows across time that the quantity of websites enabling
+          DFIAM creation and distribution has ballooned since the above survey
+          was conducted. Our graph for this data, below, echoes the Google
+          Trends data for each DFIA 'Harm Sphere': 'deepfake' faceswap DFIA,
+          'nudify' bodyswap DFIA, and 'Generative AI' DFIA.{" "}
+        </p>
+
+        <br />
+        <p>
+          {" "}
+          As is clearly visible in either graph, the 'Generative AI' type of
+          Deepfake Image-based sexual Abuse has dwarved both the original
+          'deepfake' kind of DFIA in which victims' faces were 'faceswapped'
+          onto pornographic imagery, and the 'nudify' or 'deepnude' kind of DFIA
+          in which victims' clothed bodies in photographs were replaced with
+          nude versions.
+        </p>
+
+        <br />
+
+        <p>
+          In our graph, the dashed line shows the number of website still online
+          at any given time: this number seems to have stabilized around 1,300 -
+          1,400 websites, though growth is still apparent and will likely reveal
+          itself in our next annual analysis.
+        </p>
+      </div>
+      <div id="graph_container" style={{ display: "flex" }}>
+        <div
+          style={{
+            // marginRight:'1em',
+            height: "70vh",
+            width: "auto",
+            marginBottom: "1em",
+          }}
+        >
+          <DfiaSites />
+        </div>
+        <div
+          style={{
+            marginLeft: "1em",
+            height: "70vh",
+            width: "auto",
+          }}
+        >
+          <GgTrends />
+        </div>
+      </div>
+      <div className="banner">
+        <h2>Wait, isn't DFIA illegal? Aren't the cops taking care of it?</h2>
+      </div>
+      <div className="copy">
+        <p>Effectively, DFIA remains in many ways beyond the law.</p>
+        <p>
+          Some direct laws exist, but only two of these (
+          <a
+            href="https://law.justia.com/codes/georgia/title-16/chapter-11/article-3/part-3/section-16-11-90/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Georgia, USA
+          </a>
+          ;{" "}
+          <a
+            href="https://www.legislation.gov.au/C2021A00076/latest/text"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Australia's Online Safety Act
+          </a>
+          ) have extraterritoriality, meaning that for all other laws, offenders
+          across borders aren't reachable by local law enforcement - a
+          case-stopping loophole for any sort of cybercrime. Also, there are
+          many ways of prospering from this harm which the law hasn't come close
+          to criminalizing: chiefly, referral codes.
+        </p>
+        <br />
+        <p>
+          Indeed, although DFIAM creation may sometimes be criminalised by laws,
+          the creation of DFIAM is almost always hidden by the DFIA websites
+          (which purposefully do not keep activity logs) and so offenders
+          acquire the DFIAM without anybody knowing, leaving no evidence with
+          which to enforce the law.
+        </p>
+        <br />
+        <p>
+          Additionally, and crucially, the hidden nature of this online process
+          makes it impossible to know, without running the DFIAM creation
+          websites, how much DFIAM is being created. All we can know for certain
+          is how many DFIA websites are online, and unless somebody conducts
+          research as we have been doing that information will also be lost to
+          time.
+        </p>
+      </div>
+
+      <div className="banner">
+        <h2>...Why haven't I heard of you?</h2>
+      </div>
+      <div className="copy">
+        <p>
+          We don't spend money on publicity. All our efforts and resources are
+          put toward research and implementation of solutions. Until very
+          recently we were fully immersed in producing our first systematic
+          report, compiled as part of our founder's doctoral research at
+          University College London.{" "}
+        </p>
+        <br />
+        <p>
+          We hope to open a reporting system and to fund individual as well as
+          class action court cases, cooperating with national and international
+          law enforcement, to aid victim-survivors and prevent further DFIA.
+        </p>
+        <br />
+        <p>
+          However, we cannot do this without your help. Please consider donating
+          to support our work!
+        </p>
+      </div>
     </div>
   );
 }
 
 export default Mission;
-
-{
-  /* <div> */
-}
-{
-  /* <div>
-          <p>Headlines</p>
-        </div>
-        <div>
-          <h2>
-            Despite the lack of headlines, 'deepfake porn' has not gone away.
-          </h2>
-          <h3>
-            We have been monitoring it using a systematic and rigorous academic
-            methodology since 2021. Once created, the content is endlessly
-            redistributed across the internet, appearing eventually on 'regular'
-            websites...
-          </h3>
-          victim harms...
-          scale: */
-}
-
-{
-  /* <div style={{ maxHeight: "30vh", width: "30vw" }}>
-            <Gg_trends />
-          </div> */
-}
-{
-  /* </div> */
-}
-{
-  /* </div> */
-}
-{
-  /* <div>
-        DeepfAIke "porn" (DFIAM) is a type of image-based sexual abuse material
-        (DFIAM), separated from child sexual abuse material (CSAM) only by the
-        (apparent) age of the victim-survivor depicted. Distribution of DFIAM is
-        illegal in ___ countries, including ___. Creation of DFIAM is illegal in
-        ____. Despite this, there were 1,000 websites distributing DFIAM as of
-        June 2025, and 1,000 websites where visitors can create DFIAM. 500 of
-        these websites allow the visitor to create DFIAM of a real individual by
-        uploading a single photo of the person they want to "nudify". As of
-        2025, these websites were receiving ___ visits per month. at
-        DefyAbuse.org we are the only entity monitoring the proliferation of
-        DFIAM. We are doing our best to tackle it: outside of annually
-        collecting and combing through thousands of websites (at minimum 18,000
-        urls per year), we have advised the home office vawg team and the dist
-        etc
-      </div> */
-}

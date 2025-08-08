@@ -1,6 +1,7 @@
 function Findings() {
   return (
     <div>
+      the solution (defy)
       <p>findings</p>
       <div>
         {/* <div id="chart-container">

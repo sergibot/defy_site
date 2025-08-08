@@ -32,6 +32,8 @@ function App() {
             placeContent: "center",
             placeItems: "center",
             placeSelf: "center",
+            paddingTop:'0.4em',
+            paddingBottom:'0.4em',
           }}
         >
           <div
@@ -244,7 +246,7 @@ function App() {
                       color: "rgb(50,220,94)",
                     }}
                   >
-                    Donate
+                    Help Us!
                   </h2>
                 )}
               </div>
@@ -301,11 +303,11 @@ function App() {
       this.name = name;
     }
   }
-  const IntroTab = new Tab("intro", "Mission");
-  const FiguresTab = new Tab("figures", "Research");
-  const WhoTab = new Tab("who", "Who");
-  const GoalsTab = new Tab("what", "Goals");
-  const DonateTab = new Tab("donate", "Donate");
+  const IntroTab = new Tab("intro", "Problem");
+  const FiguresTab = new Tab("figures", "Solution");
+  const WhoTab = new Tab("who", "About Us");
+  const GoalsTab = new Tab("what", "Milestones");
+  const DonateTab = new Tab("donate", "Help Us!");
   const tabs = [IntroTab, FiguresTab, WhoTab, GoalsTab];
   return (
     <>
