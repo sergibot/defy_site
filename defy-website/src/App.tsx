@@ -14,7 +14,6 @@ import "./App.css";
 // https://2019.wattenberger.com/blog/react-and-d3
 import { useMediaQuery } from "react-responsive";
 
-
 function App() {
   const [activeTab, setActiveTab] = useState("intro");
 
@@ -31,8 +30,8 @@ function App() {
             placeContent: "center",
             placeItems: "center",
             placeSelf: "center",
-            paddingTop:'0.4em',
-            paddingBottom:'0.4em',
+            paddingTop: "0.4em",
+            paddingBottom: "0.4em",
           }}
         >
           <div
@@ -255,7 +254,9 @@ function App() {
       </>
     );
   }
-  function MainPanel() {
+  function MainPanel(landscape:any) {
+    let heightHere = '10vh'
+    heightHere = landscape ? "85vh" : "100vh";
     return (
       <>
         <div
@@ -263,7 +264,8 @@ function App() {
           style={{
             fontFamily: "Cafe",
             fontSize: "x-large",
-              // height: "90%",
+            // height: "90%",
+            height:heightHere,
             backgroundColor: "white",
             zIndex: 2,
           }}
@@ -332,7 +334,7 @@ function App() {
             }}
           >
             <SideBar />
-            <MainPanel />
+            <MainPanel landscape={isBigScreen}/>
           </div>
         )}
         {!isBigScreen && (
@@ -346,7 +348,7 @@ function App() {
             }}
           >
             <TopBar />
-            <MainPanel />
+            <MainPanel landscape={isBigScreen} />
           </div>
         )}
       </div>

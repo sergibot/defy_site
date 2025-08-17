@@ -1,23 +1,35 @@
 import { useState } from "react";
 import UkLaw from "./laws/uk";
 import AlabamaLaw from "./laws/alabama";
+import CaliLaw from "./laws/california";
+import FloridaLaw from "./laws/florida";
+import GeorgiaLaw from "./laws/georgia";
 
 function Laws() {
-  const [nation, setNation] = useState("UK");
+  const [nation, setNation] = useState("USA_Alabama");
 
   return (
-    <div style={{height:'100%'}}>
+    <div
+      style={{
+        height: "100%",
+        width: "100%",
+          // backgroundColor: "lightcoral",
+      }}
+    >
       <div
         style={{
           height: "6%",
+          width: "100%",
           // height: "60px",
-          backgroundColor: "lightcoral",
+          // backgroundColor: "lightcoral",
           display: "flex",
           placeContent: "center",
           placeItems: "center",
         }}
       >
-        <label htmlFor="laws">Country/State:</label>
+        <label htmlFor="laws" style={{ marginRight: "1em" }}>
+          Country/State:
+        </label>
         <select
           name="laws"
           id="laws"
@@ -27,6 +39,9 @@ function Laws() {
         >
           <option value="UK">United Kingdom</option>
           <option value="USA_Alabama">USA - Alabama</option>
+          <option value="USA_Cali">USA - California</option>
+          <option value="USA_Flo">USA - Florida</option>
+          <option value="USA_Geo">USA - Georgia</option>
         </select>
       </div>
       <div
@@ -34,16 +49,19 @@ function Laws() {
           // height: `calc(100%-60px)`,
           // height: "100%",
           height: "94%",
-          width:'100%',
-          backgroundColor: "blue",
+          width: "100%",
+          // backgroundColor: "blue",
           display: "flex",
           // placeContent: "center",
           // placeItems: "center",
-          overflowY:'scroll'
+          overflowY: "scroll",
         }}
       >
         {nation == "UK" ? <UkLaw /> : null}
         {nation == "USA_Alabama" ? <AlabamaLaw /> : null}
+        {nation == "USA_Cali" ? <CaliLaw /> : null}
+        {nation == "USA_Flo" ? <FloridaLaw /> : null}
+        {nation == "USA_Geo" ? <GeorgiaLaw /> : null}
       </div>
     </div>
   );

@@ -5,11 +5,14 @@
   text-align: center;
 }
 .lawHeader{
-  background-color: purple;
+  /* background-color: purple; */
+  padding-top:1em;
 }
 .lawBody{
   background-color: green;
   text-align: left;
+  padding-top:1em;
+  padding-bottom:1em;
 
 }
 
