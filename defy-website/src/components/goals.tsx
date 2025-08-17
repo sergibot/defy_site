@@ -1,8 +1,16 @@
 function Goals() {
   return (
     <div>
-      how donations will help solve the problem
-      <p>next goals</p>
+      <p>About us</p>
+      <p>
+
+
+Founded in November 2023, ...
+advised home office, npcc, nca
+dist porn inquiry baroness bertin
+
+
+      </p>
     </div>
   );
 }

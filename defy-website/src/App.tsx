@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Logo } from "./assets/jsx_of_svg/logo";
 // import { TabSVG } from "./assets/jsx_of_svg/tab";
-import Findings from "./components/findings";
+import Laws from "./components/laws";
 import Donate from "./components/donate";
 import Mission from "./components/mission";
 import Who from "./components/who";
@@ -246,7 +246,7 @@ function App() {
                       color: "rgb(50,220,94)",
                     }}
                   >
-                    Help Us!
+                    Support Us!
                   </h2>
                 )}
               </div>
@@ -264,6 +264,7 @@ function App() {
           style={{
             fontFamily: "Cafe",
             fontSize: "x-large",
+              // height: "90%",
             backgroundColor: "white",
             zIndex: 2,
           }}
@@ -279,11 +280,11 @@ function App() {
               overflowY: "scroll",
             }}
           >
-            <div>{activeTab == IntroTab.id ? <Mission /> : null}</div>
-            <div>{activeTab == WhoTab.id ? <Who /> : null}</div>
-            <div>{activeTab == FiguresTab.id ? <Findings /> : null}</div>
-            <div>{activeTab == GoalsTab.id ? <Goals /> : null}</div>
-            <div>{activeTab == DonateTab.id ? <Donate /> : null}</div>
+            {activeTab == IntroTab.id ? <Mission /> : null}
+            {activeTab == WhoTab.id ? <Who /> : null}
+            {activeTab == FiguresTab.id ? <Laws /> : null}
+            {activeTab == GoalsTab.id ? <Goals /> : null}
+            {activeTab == DonateTab.id ? <Donate /> : null}
           </div>
         </div>
       </>
@@ -303,11 +304,11 @@ function App() {
       this.name = name;
     }
   }
-  const IntroTab = new Tab("intro", "Problem");
-  const FiguresTab = new Tab("figures", "Solution");
-  const WhoTab = new Tab("who", "About Us");
-  const GoalsTab = new Tab("what", "Milestones");
-  const DonateTab = new Tab("donate", "Help Us!");
+  const IntroTab = new Tab("intro", "Statistics");
+  const FiguresTab = new Tab("figures", "Laws");
+  const WhoTab = new Tab("who", "Report!");
+  const GoalsTab = new Tab("what", "About Us");
+  const DonateTab = new Tab("donate", "Support Us!");
   const tabs = [IntroTab, FiguresTab, WhoTab, GoalsTab];
   return (
     <>

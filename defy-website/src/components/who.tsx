@@ -1,16 +1,7 @@
 function Who() {
   return (
     <div>
-      <p>About us</p>
-      <p>
-
-
-Founded in November 2023, ...
-advised home office, npcc, nca
-dist porn inquiry baroness bertin
-
-
-      </p>
+      report!
       {/* <h1>The DefyAbuse Team</h1>
       <h2>Sergi Bray</h2>
       <h3>Oxford Classics Graduate, Sergi completed his PhD at UCL in October 2025. </h3>

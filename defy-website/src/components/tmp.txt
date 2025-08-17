@@ -1,0 +1,363 @@
+
+      <div className="banner">
+        <h3>
+          Given the scale of the problem, and the explosive, complex nature of
+          the 'Generative AI' industry-subsidized DFIAM creation process, is
+          there any fix to this situation?
+        </h3>
+      </div>
+      <br />
+      <div className="copy">
+        <p>
+          At DefyAbuse, we have been building a simple, holistic solution: we
+          have created a map of the online territory occupied by DFIA and
+          similar harms. Bringing together discussion forums, DFIAM-as-a-Service
+          websites, 'Generative AI' APIs, chatbot-creation platforms, affiliate
+          referral code distributors, and other diverse online loci, the map
+          that we have spent five years charting illustrates the ecosystem that
+          enables and monetizes the creation and distribution of DFIAM at
+          immeasurable scale.
+        </p>
+      </div>
+      <div className="banner">
+        <h3>Are you in contact with the police about this?</h3>
+      </div>
+      <br />
+      <div className="copy">
+        <p>
+          Yes, we are. We advise the heads of the UK's National Police Chiefs'
+          Council and National Crime Agency as well as the UK Government's Department
+          for Science, Innovation and Technology, and the UK Home Office's Interpersonal
+          Abuse and Violence Against Women and Girls units.
+          {/* We have reached out to the USA's Georgia Bureau of Investigation who have a Deepfake Task Force. */}
+        </p>
+        <br />
+        <p>
+          However, the laws are weak and new and are not effective upon the
+          ecosystem. For instance, in the UK the Online Safety Act did criminalize the creation and distribution of image-based sexual abuse material as of 31st January 2023
+          {/* -referral -gift cards -shell companies w uk */}
+          {/* addresses */}
+        </p>
+      </div>
+      <div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <table style={{ width: "100%", marginTop: "1em", textAlign: "center" }}>
+          <tr>
+            <th>Country</th>
+            <th colSpan={2} style={{ textAlign: "left" }}>
+              Victims
+            </th>
+            <th colSpan={2} style={{ textAlign: "left" }}>
+              Perpetrators
+            </th>
+            <th>Population</th>
+          </tr>
+          <tr>
+            <th>(age 18+)</th>
+            <th>%</th>
+            <th>N</th>
+            <th>%</th>
+            <th>N</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Australia</td>
+            <td>3.7</td>
+            <td>790,213</td>
+            <td>2.4</td>
+            <td>512,571</td>
+            <td>21,357,108</td>
+          </tr>
+          <tr>
+            <td>South Korea</td>
+            <td>3.1</td>
+            <td>1,909,439</td>
+            <td>1.2</td>
+            <td>739,138</td>
+            <td>61,594,800</td>
+          </tr>
+          <tr>
+            <td>Mexico</td>
+            <td>2.9</td>
+            <td>2,545,216</td>
+            <td>1.2</td>
+            <td>1,053,193</td>
+            <td>87,766,066</td>
+          </tr>
+          <tr>
+            <td>USA</td>
+            <td>2.3</td>
+            <td>6,027,910</td>
+            <td>2.6</td>
+            <td>6,814,159</td>
+            <td>262,083,034</td>
+          </tr>
+          <tr>
+            <td>France</td>
+            <td>1.6</td>
+            <td>829,985</td>
+            <td>1.1</td>
+            <td>570,615</td>
+            <td>51,874,048</td>
+          </tr>
+          <tr>
+            <td>Spain</td>
+            <td>1.4</td>
+            <td>560,100</td>
+            <td>0.8</td>
+            <td>320,057</td>
+            <td>40,007,177</td>
+          </tr>
+          <tr>
+            <td>Netherlands</td>
+            <td>1.0</td>
+            <td>141,642</td>
+            <td>0.4</td>
+            <td>56,657</td>
+            <td>14,164,193</td>
+          </tr>
+          <tr>
+            <td>Denmark</td>
+            <td>1.0</td>
+            <td>48,518</td>
+            <td>0.7</td>
+            <td>33,963</td>
+            <td>4,851,818</td>
+          </tr>
+          <tr>
+            <td>Poland</td>
+            <td>0.9</td>
+            <td>277,420</td>
+            <td>0.5</td>
+            <td>154,122</td>
+            <td>30,824,437</td>
+          </tr>
+          <tr>
+            <td>Belgium</td>
+            <td>0.7</td>
+            <td>64,464</td>
+            <td>0.3</td>
+            <td>27,627</td>
+            <td>9,209,116</td>
+          </tr>
+          <tr>
+            <td>Above Totalled</td>
+            <td>2.2</td>
+            <td>13,194,907</td>
+            <td>1.8</td>
+            <td>10,282,101</td>
+            <td>583,731,797</td>
+          </tr>
+          <tr>
+            <td style={{ backgroundColor: "#eeeeee" }}>Globe (age 15+)</td>
+            <td>2.2</td>
+            <td style={{ backgroundColor: "#eeeeee" }}>136,310,574</td>
+            <td>1.8</td>
+            <td style={{ backgroundColor: "#eeeeee" }}>111,526,833</td>
+            <td>6,195,935,158</td>
+          </tr>
+        </table>
+      </>
+    );
+  }
+  return (
+    <div style={{ marginTop: "2em", marginBottom: "2em" }}>
+      stats
+      <div className="banner">
+        <h2>DFIAM is a serious yet unmonitored harm.</h2>
+      </div>
+      <div className="copy">
+        <p>
+          In mid-2023,{" "}
+          <a
+            href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642382"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            an academic survey
+          </a>{" "}
+          of over 16,000 participants across 10 countries found that:
+        </p>{" "}
+        <br />
+        <p>
+          2.2% of participants were victim-survivors of deepfake image-based
+          sexual abuse;{" "}
+        </p>{" "}
+        <br />
+        <p>
+          1.8% of participants openly admitted to perpetrating this sort of
+          abuse.{" "}
+        </p>{" "}
+        <br />
+        <p>
+          Extrapolating from this survey's findings indicates that over a
+          hundred million adults worldwide would have been victim-survivors of
+          DFIA in mid-2023. This study is the only one of its kind; research in
+          this area is sparse to non-existent.
+        </p>
+        <br />
+        <p>
+          The above survey was also unfortunately conducted before the
+          'Generative AI' bubble, and similar studies have not since emerged
+          despite the supercharging effect that this bubble has had on DFIA
+          production and distribution.
+          {/* However, much has unfortunately changed for the worse since */}
+          {/* that survey. */}
+        </p>
+        <div>
+          <TableFromStudy />
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+      <div className="banner">
+        <h2>Wait, isn't DFIA illegal? Aren't the cops taking care of it?</h2>
+      </div>
+      <div className="copy">
+        {/* <p>Perpetrators of DFIA remain in many ways beyond the law.</p> */}
+        <p>
+
+
+
+
+
+
+          
+          {/* <a
+            href="https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201920200AB602"
+            target="_blank"
+            rel="noopener noreferrer"
+          > */}
+          {/* emotional distress, or statutory damages up to $150,000,{" "}
+          <span>in addition to</span> attorney fees and, crucially, 'an amount
+          equal to the monetary gain made by the defendant from the creation,
+          development, or disclosure [i.e. distribution] of the sexually
+          explicit material'. */}
+          {/* https://www.sfcityattorney.org/wp-content/uploads/2024/08/Complaint_Final_Redacted.pdf */}
+          {/* Some direct laws exist, but only two of these (
+          <a
+            href="https://law.justia.com/codes/georgia/title-16/chapter-11/article-3/part-3/section-16-11-90/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Georgia, USA
+          </a>
+          ;{" "}
+          <a
+            href="https://www.legislation.gov.au/C2021A00076/latest/text"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Australia's Online Safety Act
+          </a>
+          ) have extraterritoriality, meaning that for all other laws, offenders
+          across borders aren't reachable by local law enforcement - a
+          case-stopping loophole for any sort of cybercrime.  */}
+          {/* For a multiplicity of reasons, the law has not been brought in to tackle DFIA, with very rare exception.
+
+<li>
+1 new laws - nobody knows how they will be interpreted in court, no precedent! so would rely on copyright etc - self-perpetuating cycle...
+</li>
+
+<li>
+  nobody waants to 
+</li>
+<li>
+2 individual victim-survivors, like with rape cases, will be re-traumatized throughout the justice system, with no way of proving that it wasn't them in the DFIAM... and no assurance from authorities
+</li>
+
+<li>
+3 powerful victim-survivors will be putting themselves in the crosshairs of misogyny for standing up for themselves - and also, will invite swathes of DFIAM targeting them. the less said the better - like with bullies.
+</li>
+
+an eg of all of the above is the way that the state has to step in to mitigate individual harm. making laws does not fix the problem! we have laws! using them isn't practical !
+
+eg california had one of first df laws: https://www.akingump.com/en/insights/blogs/ag-data-dive/california-deepfake-laws-first-in-country-to-take-effect
+
+but this law was not used in huge court case recently, where the city of san fran sued 10 df companies
+https://sfcityattorney.org/2025/06/02/city-attorney-shuts-down-10-websites-that-create-nonconsensual-deepfake-pornography/
+
+
+
+
+
+
+
+          There are many ways of prospering from this harm which the law hasn't
+          come close to criminalizing: chiefly, referral codes. 
+        </p>
+        <br />
+        <p>
+          Indeed, although DFIAM creation may sometimes be criminalised by laws,
+          the creation of DFIAM is almost always hidden by the DFIA websites
+          (which purposefully do not keep activity logs) and so offenders
+          acquire the DFIAM without anybody knowing, leaving no evidence with
+          which to enforce the law.
+        </p>
+        <br />
+        <p>
+          Additionally, and crucially, the hidden nature of this online process
+          makes it impossible to know, without running the DFIAM creation
+          websites, how much DFIAM is being created. All we can know for certain
+          is how many DFIA websites are online, and unless somebody conducts
+          research as we have been doing that information will also be lost to
+          time. */}
+        </p>
+      </div>
+
+      <div className="banner">
+        <h2>...Why haven't I heard of you?</h2>
+      </div>
+      <div className="copy">
+        <p>
+          We don't spend money on publicity. All our efforts and resources are
+          put toward research and implementation of solutions. Until very
+          recently we were fully immersed in producing our first systematic
+          report, compiled as part of our founder's doctoral research at
+          University College London.{" "}
+        </p>
+        <br />
+        <p>
+          We hope to open a reporting system and to fund individual as well as
+          class action court cases, cooperating with national and international
+          law enforcement, to aid victim-survivors and prevent further DFIA.
+        </p>
+        <br />
+        <p>
+          However, we cannot do this without your help. Please consider donating
+          to support our work.
+        </p>
+        <br />
+      </div>
+
+      <div className="banner">
+        <h2>A brief statement on funding: </h2>
+      </div>
+      <div className="copy">
+        <p>
+          We will not be seeking grants of any kind, since these necessarily tie
+          funded organisations to the interests of the grant-givers. We believe
+          in a lean democratic approach, whereby we may avoid the cycle of
+          advertising-funding-advertising and such empty façades. As such, we
+          can only operate insofar as donations fund our activities. Again,
+          please consider supporting our work with a donation.
+        </p>
+      </div
