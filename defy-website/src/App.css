@@ -4,6 +4,14 @@
   /* padding: 2rem; */
   text-align: center;
 }
+.lawHeader{
+  background-color: purple;
+}
+.lawBody{
+  background-color: green;
+  text-align: left;
+
+}
 
 select:not([multiple]) {
   -webkit-appearance: none;

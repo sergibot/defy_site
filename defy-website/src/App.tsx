@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Logo } from "./assets/jsx_of_svg/logo";
-// import { TabSVG } from "./assets/jsx_of_svg/tab";
 import Laws from "./components/laws";
 import Donate from "./components/donate";
 import Mission from "./components/mission";
@@ -271,13 +270,12 @@ function App() {
         >
           <div
             style={{
-              // paddingBlock: "50px",
               paddingLeft: "50px",
               paddingRight: "50px",
               color: "rgb(35,31,32)",
               height: "100%",
               maxWidth: "100%",
-              overflowY: "scroll",
+              // overflowY: "scroll",
             }}
           >
             {activeTab == IntroTab.id ? <Mission /> : null}
