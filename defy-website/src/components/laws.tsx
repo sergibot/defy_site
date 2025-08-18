@@ -13,7 +13,7 @@ function Laws() {
       style={{
         height: "100%",
         width: "100%",
-          // backgroundColor: "lightcoral",
+        // backgroundColor: "lightcoral",
       }}
     >
       <div
@@ -24,6 +24,7 @@ function Laws() {
           // backgroundColor: "lightcoral",
           display: "flex",
           placeContent: "center",
+          marginTop: "0.7em",
           placeItems: "center",
         }}
       >
@@ -52,9 +53,10 @@ function Laws() {
           width: "100%",
           // backgroundColor: "blue",
           display: "flex",
+          flexDirection:'column',
           // placeContent: "center",
           // placeItems: "center",
-          overflowY: "scroll",
+          // overflowY: "scroll",
         }}
       >
         {nation == "UK" ? <UkLaw /> : null}

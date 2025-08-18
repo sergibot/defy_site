@@ -265,6 +265,7 @@ function App() {
             fontFamily: "Cafe",
             fontSize: "x-large",
             // height: "90%",
+            width:'80%',
             height:heightHere,
             backgroundColor: "white",
             zIndex: 2,
