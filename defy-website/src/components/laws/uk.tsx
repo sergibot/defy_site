@@ -1,5 +1,5 @@
-function UkLaw() {
+function HawaiiLaw() {
   return <div></div>;
 }
 
-export default UkLaw;
+export default HawaiiLaw;

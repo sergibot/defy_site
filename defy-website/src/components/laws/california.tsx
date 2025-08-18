@@ -1,204 +1,194 @@
+import { useState } from "react";
 function CaliLaw() {
-  return (
-    <div>
+  const opt1 = (
+    <p>
       <div className="lawHeader">
-        CIV 1708.86
-        <br />
-        passed 2019
-        <br />
-        Effective [1/1/2020]
+        Passed 2019; Effective [1/1/2020]
         <br />
         Civil code
         <br />
         creation/distribution of ibsam/dfiam : Total money the defendant made
         from the IBSAM/DFIAM; economic and non-economic damages; punitive
-        damages; attorney’s fees; or, per IBSAM/DFIAM instance, statutory
+        damages; attorney's fees; or, per IBSAM/DFIAM instance, statutory
         damages: $1,500-$30,000 (or max $150,000 if IBSAM/DFIAM
         creation/distribution was committed with malice)
       </div>
       <div className="lawBody">
-        <p>
-          1708.86. (a) For purposes of this section:
-          <br />
-          (1) "Altered depiction" means a performance that was actually
-          performed by the depicted individual but was subsequently altered to
-          be in violation of this section.
-          <br />
-          (2) "Authorized Representative" means an attorney, talent agent, or
-          personal manager authorized to represent a depicted individual if the
-          depicted individual is represented.
-          <br />
-          (3) (A) "Consent" means an agreement written in plain language signed
-          knowingly and voluntarily by the depicted individual that includes a
-          general description of the sexually explicit material and the
-          audiovisual work in which it will be incorporated.
-          <br />
-          (B) A depicted individual may rescind consent by delivering written
-          notice within three business days from the date consent was given to
-          the person in whose favor consent was made, unless one of the
-          following requirements is satisfied:
-          <br />
-          (i) The depicted individual is given at least 72 hours to review the
-          terms of the agreement before signing it.
-          <br />
-          (ii) The depicted individual's authorized representative provides
-          written approval of the signed agreement.
-          <br />
-          (4) "Depicted individual" means an individual who appears, as a result
-          of digitization, to be giving a performance they did not actually
-          perform or to be performing in an altered depiction.
-          <br />
-          (5) "Despicable conduct" means conduct that is so vile, base, or
-          contemptible that it would be looked down on and despised by a
-          reasonable person.
-          <br />
-          (6) "Digitization" means to realistically depict any of the following:
-          <br />
-          (A) The nude body parts of another human being as the nude body parts
-          of the depicted individual.
-          <br />
-          (B) Computer-generated nude body parts as the nude body parts of the
-          depicted individual.
-          <br />
-          (C) The depicted individual engaging in sexual conduct in which the
-          depicted individual did not engage.
-          <br />
-          (7) "Disclose" means to publish, make available, or distribute to the
-          public.
-          <br />
-          (8) "Individual" means a natural person.
-          <br />
-          (9) "Malice" means that the defendant acted with intent to cause harm
-          to the plaintiff or despicable conduct that was done with a willful
-          and knowing disregard of the rights of the plaintiff. A person acts
-          with knowing disregard within the meaning of this paragraph when they
-          are aware of the probable harmful consequences of their conduct and
-          deliberately fail to avoid those consequences.
-          <br />
-          (10) "Nude" means visible genitals, pubic area, anus, or a female's
-          postpubescent nipple or areola.
-          <br />
-          (11) "Person" means a human being or legal entity.
-          <br />
-          (12) "Plaintiff" includes cross-plaintiff.
-          <br />
-          (13) "Sexual conduct" means any of the following:
-          <br />
-          (A) Masturbation.
-          <br />
-          (B) Sexual intercourse, including genital, oral, or anal, whether
-          between persons regardless of sex or gender or between humans and
-          animals.
-          <br />
-          (C) Sexual penetration of the vagina or rectum by, or with, an object.
-          <br />
-          (D) The transfer of semen by means of sexual conduct from the penis
-          directly onto the depicted individual as a result of ejaculation.
-          <br />
-          (E) Sadomasochistic abuse involving the depicted individual.
-          <br />
-          (14) "Sexually explicit material" means any portion of an audiovisual
-          work that shows the depicted individual performing in the nude or
-          appearing to engage in, or being subjected to, sexual conduct.
-          <br />
-          (b) A depicted individual has a cause of action against a person who
-          does either of the following:
-          <br />
-          (1) Creates and intentionally discloses sexually explicit material and
-          the person knows or reasonably should have known the depicted
-          individual in that material did not consent to its creation or
-          disclosure.
-          <br />
-          (2) Intentionally discloses sexually explicit material that the person
-          did not create and the person knows the depicted individual in that
-          material did not consent to the creation of the sexually explicit
-          material.
-          <br />
-          (c) (1) A person is not liable under this section in either of the
-          following circumstances:
-          <br />
-          (A) The person discloses the sexually explicit material in the course
-          of any of the following:
-          <br />
-          (1) Reporting unlawful activity.
-          <br />
-          (in) Exercising the person's law enforcement duties.
-          <br />
-          (111) Hearings, trials, or other legal proceedings.
-          <br />
-          (B) The material is any of the following:
-          <br />
-          (i) A matter of legitimate public concern.
-          <br />
-          (11) A work of political or newsworthy value or similar work (iii)
-          Commentary, criticism, or disclosure that is otherwise protected by
-          the California Constitution or the United States Constitution.
-          <br />
-          (2) For purposes of this subdivision, sexually explicit material is
-          not of newsworthy value solely because the depicted individual is a
-          public figure.
-          <br />
-          (d) It shall not be a defense to an action under this section that
-          there is a disclaimer included in the sexually explicit material that
-          communicates that the inclusion of the depicted individual in the
-          sexually explicit material was unauthorized or that the depicted
-          individual did not participate in the creation or development of the
-          material.
-          <br />
-          (e) (1) A prevailing plaintiff who suffers harm as a result of the
-          violation of subdivision (b) may recover any of the following:
-          <br />
-          <br />
-          (A) An amount equal to the monetary gain made by the defendant from
-          the creation, development, or disclosure of the sexually explicit
-          material.
-          <br />
-          (B) One of the following:
-          <br />
-          (i) Economic and noneconomic damages proximately caused by the
-          disclosure of the sexually explicit material, including damages for
-          emotional distress. (ii) Upon request of the plaintiff at any time
-          before the final judgment is rendered, the plaintiff may instead
-          recover an award of statutory damages for all unauthorized acts
-          involved in the action, with respect to any one work, as follows:
-          <br />
-          (I) A sum of not less than one thousand five hundred dollars ($1,500)
-          but not more than thirty thousand dollars ($30,000).
-          <br />
-          (I) If the unlawful act was committed with malice, the award of
-          statutory damages may be increased to a maximum of one hundred fifty
-          thousand dollars ($150,000).
-          <br />
-          (C) Punitive damages.
-          <br />
-          (D) Reasonable attorney's fees and costs.
-          <br />
-          (E) Any other available relief, including injunctive relief.
-          <br />
-          (2) The remedies provided by this section are cumulative and shall not
-          be construed as restricting a remedy that is available under any other
-          law.
-          <br />
-          (f) An action under this section shall be commenced no later than
-          three years from the date the unauthorized creation, development, or
-          disclosure was discovered or should have been discovered with the
-          exercise of reasonable diligence.
-          <br />
-          (g) The provisions of this section are severable. If any provision of
-          this section or its application is held invalid, that invalidity shall
-          not affect other provisions.
-          <br />
-        </p>
+        1708.86. (a) For purposes of this section:
+        <br />
+        (1) "Altered depiction" means a performance that was actually performed
+        by the depicted individual but was subsequently altered to be in
+        violation of this section.
+        <br />
+        (2) "Authorized Representative" means an attorney, talent agent, or
+        personal manager authorized to represent a depicted individual if the
+        depicted individual is represented.
+        <br />
+        (3) (A) "Consent" means an agreement written in plain language signed
+        knowingly and voluntarily by the depicted individual that includes a
+        general description of the sexually explicit material and the
+        audiovisual work in which it will be incorporated.
+        <br />
+        (B) A depicted individual may rescind consent by delivering written
+        notice within three business days from the date consent was given to the
+        person in whose favor consent was made, unless one of the following
+        requirements is satisfied:
+        <br />
+        (i) The depicted individual is given at least 72 hours to review the
+        terms of the agreement before signing it.
+        <br />
+        (ii) The depicted individual's authorized representative provides
+        written approval of the signed agreement.
+        <br />
+        (4) "Depicted individual" means an individual who appears, as a result
+        of digitization, to be giving a performance they did not actually
+        perform or to be performing in an altered depiction.
+        <br />
+        (5) "Despicable conduct" means conduct that is so vile, base, or
+        contemptible that it would be looked down on and despised by a
+        reasonable person.
+        <br />
+        (6) "Digitization" means to realistically depict any of the following:
+        <br />
+        (A) The nude body parts of another human being as the nude body parts of
+        the depicted individual.
+        <br />
+        (B) Computer-generated nude body parts as the nude body parts of the
+        depicted individual.
+        <br />
+        (C) The depicted individual engaging in sexual conduct in which the
+        depicted individual did not engage.
+        <br />
+        (7) "Disclose" means to publish, make available, or distribute to the
+        public.
+        <br />
+        (8) "Individual" means a natural person.
+        <br />
+        (9) "Malice" means that the defendant acted with intent to cause harm to
+        the plaintiff or despicable conduct that was done with a willful and
+        knowing disregard of the rights of the plaintiff. A person acts with
+        knowing disregard within the meaning of this paragraph when they are
+        aware of the probable harmful consequences of their conduct and
+        deliberately fail to avoid those consequences.
+        <br />
+        (10) "Nude" means visible genitals, pubic area, anus, or a female's
+        postpubescent nipple or areola.
+        <br />
+        (11) "Person" means a human being or legal entity.
+        <br />
+        (12) "Plaintiff" includes cross-plaintiff.
+        <br />
+        (13) "Sexual conduct" means any of the following:
+        <br />
+        (A) Masturbation.
+        <br />
+        (B) Sexual intercourse, including genital, oral, or anal, whether
+        between persons regardless of sex or gender or between humans and
+        animals.
+        <br />
+        (C) Sexual penetration of the vagina or rectum by, or with, an object.
+        <br />
+        (D) The transfer of semen by means of sexual conduct from the penis
+        directly onto the depicted individual as a result of ejaculation.
+        <br />
+        (E) Sadomasochistic abuse involving the depicted individual.
+        <br />
+        (14) "Sexually explicit material" means any portion of an audiovisual
+        work that shows the depicted individual performing in the nude or
+        appearing to engage in, or being subjected to, sexual conduct.
+        <br />
+        (b) A depicted individual has a cause of action against a person who
+        does either of the following:
+        <br />
+        (1) Creates and intentionally discloses sexually explicit material and
+        the person knows or reasonably should have known the depicted individual
+        in that material did not consent to its creation or disclosure.
+        <br />
+        (2) Intentionally discloses sexually explicit material that the person
+        did not create and the person knows the depicted individual in that
+        material did not consent to the creation of the sexually explicit
+        material.
+        <br />
+        (c) (1) A person is not liable under this section in either of the
+        following circumstances:
+        <br />
+        (A) The person discloses the sexually explicit material in the course of
+        any of the following:
+        <br />
+        (1) Reporting unlawful activity.
+        <br />
+        (in) Exercising the person's law enforcement duties.
+        <br />
+        (111) Hearings, trials, or other legal proceedings.
+        <br />
+        (B) The material is any of the following:
+        <br />
+        (i) A matter of legitimate public concern.
+        <br />
+        (11) A work of political or newsworthy value or similar work (iii)
+        Commentary, criticism, or disclosure that is otherwise protected by the
+        California Constitution or the United States Constitution.
+        <br />
+        (2) For purposes of this subdivision, sexually explicit material is not
+        of newsworthy value solely because the depicted individual is a public
+        figure.
+        <br />
+        (d) It shall not be a defense to an action under this section that there
+        is a disclaimer included in the sexually explicit material that
+        communicates that the inclusion of the depicted individual in the
+        sexually explicit material was unauthorized or that the depicted
+        individual did not participate in the creation or development of the
+        material.
+        <br />
+        (e) (1) A prevailing plaintiff who suffers harm as a result of the
+        violation of subdivision (b) may recover any of the following:
+        <br />
+        <br />
+        (A) An amount equal to the monetary gain made by the defendant from the
+        creation, development, or disclosure of the sexually explicit material.
+        <br />
+        (B) One of the following:
+        <br />
+        (i) Economic and noneconomic damages proximately caused by the
+        disclosure of the sexually explicit material, including damages for
+        emotional distress. (ii) Upon request of the plaintiff at any time
+        before the final judgment is rendered, the plaintiff may instead recover
+        an award of statutory damages for all unauthorized acts involved in the
+        action, with respect to any one work, as follows:
+        <br />
+        (I) A sum of not less than one thousand five hundred dollars ($1,500)
+        but not more than thirty thousand dollars ($30,000).
+        <br />
+        (I) If the unlawful act was committed with malice, the award of
+        statutory damages may be increased to a maximum of one hundred fifty
+        thousand dollars ($150,000).
+        <br />
+        (C) Punitive damages.
+        <br />
+        (D) Reasonable attorney's fees and costs.
+        <br />
+        (E) Any other available relief, including injunctive relief.
+        <br />
+        (2) The remedies provided by this section are cumulative and shall not
+        be construed as restricting a remedy that is available under any other
+        law.
+        <br />
+        (f) An action under this section shall be commenced no later than three
+        years from the date the unauthorized creation, development, or
+        disclosure was discovered or should have been discovered with the
+        exercise of reasonable diligence.
+        <br />
+        (g) The provisions of this section are severable. If any provision of
+        this section or its application is held invalid, that invalidity shall
+        not affect other provisions.
+        <br />
       </div>
+    </p>
+  );
+  const opt2 = (
+    <p>
       <div className="lawHeader">
-        <br />
-        also:
-        <br />
-        CIV 1708.88
-        <br />
-        passed 2022
-        <br />
-        Effective [1/1/2023]
+        Passed 2022; Effective [1/1/2023]
         <br />
         ibsam/dfiam distribution:
         <br />
@@ -284,19 +274,16 @@ function CaliLaw() {
           <br />
         </p>
       </div>
+    </p>
+  );
+  const opt3 = (
+    <p>
       <div className="lawHeader">
-        also,
-        <br />
-        CIV 1708.85
-        <br />
-        Civil Code
-        <br />
-        Contingent: CIV 48a
-        <br />
-        passed 2021, Effective [1/1/2022]
-        <br />
+        Passed 2021; Effective [1/1/2022]
         <br />
         IBSAM: Distribution: Temporary restraining order, attorney's fees
+        <br />
+        Contingent: CIV 48a
       </div>
       <div className="lawBody">
         <p>
@@ -422,8 +409,6 @@ function CaliLaw() {
           Nothing in this section requires the court to review pleadings or
           other papers for compliance with this provision.
           <br />
-          <br />
-          <br />
           (5) Upon request of the plaintiff, the clerk shall allow access to the
           court file in an action filed under this section only as follows:
           <br />
@@ -456,73 +441,134 @@ function CaliLaw() {
           subdivision (f).
           <br />
         </p>
-        <br />
-        <p>
-          <br />
-          48a:
-          <br />
-          48a. (a) In any action for damages for the publication of a libel in a
-          daily or weekly news publication, or of a slander by radio broadcast,
-          plaintiff shall only recover special damages unless a correction is
-          demanded and is not published or broadcast, as provided in this
-          section. Plaintiff shall serve upon the publisher at the place of
-          publication, or broadcaster at the place of broadcast, a written
-          notice specifying the statements claimed to be libelous and demanding
-          that those statements be corrected. The notice and demand must be
-          served within 20 days after knowledge of the publication or broadcast
-          of the statements claimed to be libelous.
-          <br />
-          (b) If a correction is demanded within 20 days and is not published or
-          broadcast in substantially as conspicuous a manner in the same daily
-          or weekly news publication, or on the same broadcasting station as
-          were the statements claimed to be libelous, in a regular issue thereof
-          published or broadcast within three weeks after service, plaintiff, if
-          he or she pleads and proves notice, demand and failure to correct, and
-          if his or her cause of action is maintained, may recover general,
-          special, and exemplary damages.
-          <br />
-          Exemplary damages shall not be recovered unless the plaintiff proves
-          that defendant made the publication or broadcast with actual malice
-          and then only in the discretion of the court or jury, and actual
-          malice shall not be inferred or presumed from the publication or
-          broadcast.
-          <br />
-          (c) A correction published or broadcast in substantially as
-          conspicuous a manner in the daily or weekly news publication, or on
-          the broadcasting station as the statements claimed in the complaint to
-          be libelous, before receipt of a demand for correction, shall be of
-          the same force and effect as though the correction had been published
-          or broadcast within three weeks after a demand for correction.
-          <br />
-          (d) As used in this section, the following definitions shall apply:
-          <br />
-          (1) "General damages" means damages for loss of reputation, shame,
-          mortification,
-          <br />
-          (2) "Special damages" means all damages that plaintiff alleges and
-          proves that he or she has suffered in respect to his or her property,
-          business, trade, profession, or occupation, including the amounts of
-          money the plaintiff alleges and proves he or she has expended as a
-          result of the alleged libel, and no other.
-          <br />
-          (3) "Exemplary damages" means damages that may in the discretion of
-          the court or jury be recovered in addition to general and special
-          damages for the sake of example and by way of punishing a defendant
-          who has made the publication or broadcast with actual malice.
-          <br />
-          (4) "Actual malice" means that state of mind arising from hatred or
-          ill will toward the plaintiff; provided, however, that a state of mind
-          occasioned by a good faith belief on the part of the defendant in the
-          truth of the libelous publication or broadcast at the time it is
-          published or broadcast shall not constitute actual malice.
-          <br />
-          (5) "Daily or weekly news publication" means a publication, either in
-          print or electronic form, that contains news on matters of public
-          concern and that publishes at least once a week.
-          <br />
-        </p>
       </div>
-    </div>
+    </p>
+  );
+  const opt4 = (
+    <p>
+      <div className="lawBody">
+      <br />
+      48a. (a) In any action for damages for the publication of a libel in a
+      daily or weekly news publication, or of a slander by radio broadcast,
+      plaintiff shall only recover special damages unless a correction is
+      demanded and is not published or broadcast, as provided in this section.
+      Plaintiff shall serve upon the publisher at the place of publication, or
+      broadcaster at the place of broadcast, a written notice specifying the
+      statements claimed to be libelous and demanding that those statements be
+      corrected. The notice and demand must be served within 20 days after
+      knowledge of the publication or broadcast of the statements claimed to be
+      libelous.
+      <br />
+      (b) If a correction is demanded within 20 days and is not published or
+      broadcast in substantially as conspicuous a manner in the same daily or
+      weekly news publication, or on the same broadcasting station as were the
+      statements claimed to be libelous, in a regular issue thereof published or
+      broadcast within three weeks after service, plaintiff, if he or she pleads
+      and proves notice, demand and failure to correct, and if his or her cause
+      of action is maintained, may recover general, special, and exemplary
+      damages.
+      <br />
+      Exemplary damages shall not be recovered unless the plaintiff proves that
+      defendant made the publication or broadcast with actual malice and then
+      only in the discretion of the court or jury, and actual malice shall not
+      be inferred or presumed from the publication or broadcast.
+      <br />
+      (c) A correction published or broadcast in substantially as conspicuous a
+      manner in the daily or weekly news publication, or on the broadcasting
+      station as the statements claimed in the complaint to be libelous, before
+      receipt of a demand for correction, shall be of the same force and effect
+      as though the correction had been published or broadcast within three
+      weeks after a demand for correction.
+      <br />
+      (d) As used in this section, the following definitions shall apply:
+      <br />
+      (1) "General damages" means damages for loss of reputation, shame,
+      mortification,
+      <br />
+      (2) "Special damages" means all damages that plaintiff alleges and proves
+      that he or she has suffered in respect to his or her property, business,
+      trade, profession, or occupation, including the amounts of money the
+      plaintiff alleges and proves he or she has expended as a result of the
+      alleged libel, and no other.
+      <br />
+      (3) "Exemplary damages" means damages that may in the discretion of the
+      court or jury be recovered in addition to general and special damages for
+      the sake of example and by way of punishing a defendant who has made the
+      publication or broadcast with actual malice.
+      <br />
+      (4) "Actual malice" means that state of mind arising from hatred or ill
+      will toward the plaintiff; provided, however, that a state of mind
+      occasioned by a good faith belief on the part of the defendant in the
+      truth of the libelous publication or broadcast at the time it is published
+      or broadcast shall not constitute actual malice.
+      <br />
+      (5) "Daily or weekly news publication" means a publication, either in
+      print or electronic form, that contains news on matters of public concern
+      and that publishes at least once a week.
+      <br />
+      </div>
+    </p>
+  );
+  const [law, setLaw] = useState("opt1");
+  return (
+    <>
+      <div className="lawChoice">
+        <div
+          className="lawOption"
+          style={{
+            backgroundColor: law == "opt1" ? "white" : "rgb(200,200,200)",
+            boxShadow:
+              law == "opt1" ? "0px 0px 30px 20px rgb(0 0 0 / 20%)" : "",
+            zIndex: law == "opt1" ? 1 : 2,
+          }}
+          onClick={() => setLaw("opt1")}
+        >
+          CIV 1708.86
+        </div>
+        <div
+          className="lawOption"
+          style={{
+            backgroundColor: law == "opt2" ? "white" : "rgb(200,200,200)",
+            boxShadow:
+              law == "opt2" ? "0px 0px 30px 20px rgb(0 0 0 / 20%)" : "",
+            zIndex: law == "opt2" ? 1 : 2,
+          }}
+          onClick={() => setLaw("opt2")}
+        >
+          CIV 1708.88
+        </div>
+        <div
+          className="lawOption"
+          style={{
+            backgroundColor: law == "opt3" ? "white" : "rgb(200,200,200)",
+            boxShadow:
+              law == "opt3" ? "0px 0px 30px 20px rgb(0 0 0 / 20%)" : "",
+            zIndex: law == "opt3" ? 1 : 2,
+          }}
+          onClick={() => setLaw("opt3")}
+        >
+          CIV 1708.85
+        </div>
+        <div
+          className="lawOption"
+          style={{
+            backgroundColor: law == "opt4" ? "white" : "rgb(200,200,200)",
+            boxShadow:
+              law == "opt4" ? "0px 0px 30px 20px rgb(0 0 0 / 20%)" : "",
+            zIndex: law == "opt4" ? 1 : 2,
+          }}
+          onClick={() => setLaw("opt4")}
+        >
+          CIV 48A
+        </div>
+      </div>
+      <div className="lawSelected">
+        {law == "opt1" ? opt1 : null}
+        {law == "opt2" ? opt2 : null}
+        {law == "opt3" ? opt3 : null}
+        {law == "opt4" ? opt4 : null}
+      </div>
+    </>
   );
 }
 
